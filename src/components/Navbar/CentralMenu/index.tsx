@@ -1,32 +1,41 @@
 import Link from 'next/link'
 
+interface MenuType {
+  title: string
+  url: string
+}
+
+const menus: MenuType[] = [
+  {
+    title: 'About',
+    url: '#',
+  },
+  {
+    title: 'Projects',
+    url: '#',
+  },
+  {
+    title: 'Blog',
+    url: '#',
+  },
+  {
+    title: 'Uses',
+    url: '#',
+  },
+]
+
 export function CentralMenu() {
   return (
     <ul className="md:flex hidden md:items-center md:justify-center gap-1 absolute left-1/2 -translate-x-1/2">
-      <Link
-        href={'#'}
-        className="buttons-outline text-base font-semibold text-gray py-[10px] px-4 rounded-lg hover:bg-lightgray hover:text-black transition-colors duration-200 cursor-pointer"
-      >
-        About
-      </Link>
-      <Link
-        href={'#'}
-        className="buttons-outline text-base font-semibold text-gray py-[10px] px-4 rounded-lg hover:bg-lightgray hover:text-black transition-colors duration-200 cursor-pointer"
-      >
-        Projects
-      </Link>
-      <Link
-        href={'#'}
-        className="buttons-outline text-base font-semibold text-gray py-[10px] px-4 rounded-lg hover:bg-lightgray hover:text-black transition-colors duration-200 cursor-pointer"
-      >
-        Blog
-      </Link>
-      <Link
-        href={'#'}
-        className="buttons-outline text-base font-semibold text-gray py-[10px] px-4 rounded-lg hover:bg-lightgray hover:text-black transition-colors duration-200 cursor-pointer"
-      >
-        Uses
-      </Link>
+      {menus.map((menu) => (
+        <Link
+          href={'#'}
+          key={menu.title}
+          className="hover:bg-lightgray text-base font-medium py-[10px] px-4 rounded-lg text-gray hover:text-black transition-colors duration-200 cursor-pointer"
+        >
+          {menu.title}
+        </Link>
+      ))}
     </ul>
   )
 }

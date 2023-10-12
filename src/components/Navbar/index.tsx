@@ -1,11 +1,15 @@
 'use client'
 
 import Image from 'next/image'
+import Link from 'next/link'
+
 import { CentralMenu } from './CentralMenu'
 import { HiBars3BottomRight } from 'react-icons/hi2'
-import Link from 'next/link'
-import { MobileSideMenu } from '../MobileSideMenu'
+import { MobileSideMenu } from './MobileSideMenu'
 import { MobileMenu } from '../../../context/HandleOpenMobileMenu'
+import { LanguageDropdown } from './LanguageDropdown'
+import { ThemeSwitcher } from './ThemeSwitcher'
+import { CommandShortcut } from './CommandShortcut'
 
 export function Navbar() {
   const { isOpen, switchVisibility } = MobileMenu()
@@ -27,7 +31,7 @@ export function Navbar() {
       {/* Only appears before 768px */}
 
       <button
-        className="md:hidden block py-2 px-2 rounded-md hover:bg-slate-200"
+        className="md:hidden block py-2 px-2 rounded-md hover:bg-lightgray transition-colors duration-200"
         onClick={() => switchVisibility(true)}
       >
         <HiBars3BottomRight size={26} />
@@ -37,7 +41,12 @@ export function Navbar() {
 
       {/* Only appears after 768px */}
       <CentralMenu />
-      <div className="w-[200px] h-[60px] bg-zinc-700 rounded-md hidden md:block"></div>
+
+      <div className="md:flex hidden md:items-center md:justify-center gap-2">
+        <LanguageDropdown />
+        <ThemeSwitcher />
+        <CommandShortcut />
+      </div>
     </div>
   )
 }

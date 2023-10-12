@@ -13,8 +13,9 @@ body {
   color: #111;
 }
 
-@layer components {
+/* @layer components {
   .buttons-outline {
     @apply outline-none focus:outline-2 focus:outline-offset-2 focus:outline-[#009AF1]
   }
 }
+*/
