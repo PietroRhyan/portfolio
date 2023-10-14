@@ -13,9 +13,7 @@ body {
   color: #111;
 }
 
-/* @layer components {
-  .buttons-outline {
-    @apply outline-none focus:outline-2 focus:outline-offset-2 focus:outline-[#009AF1]
-  }
+.text-poppins {
+  font-family: var(--font-poppins);
 }
-*/
+

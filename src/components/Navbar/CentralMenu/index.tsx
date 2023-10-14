@@ -26,7 +26,7 @@ const menus: MenuType[] = [
 
 export function CentralMenu() {
   return (
-    <ul className="md:flex hidden md:items-center md:justify-center gap-1 absolute left-1/2 -translate-x-1/2">
+    <nav className="md:flex hidden md:items-center md:justify-center gap-1 absolute left-1/2 -translate-x-1/2">
       {menus.map((menu) => (
         <Link
           href={'#'}
@@ -36,6 +36,6 @@ export function CentralMenu() {
           {menu.title}
         </Link>
       ))}
-    </ul>
+    </nav>
   )
 }

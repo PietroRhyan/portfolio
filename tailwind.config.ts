@@ -4,6 +4,9 @@ const config: Config = {
   content: ['./src/**/*.tsx'],
   theme: {
     extend: {
+      backgroundImage: {
+        'gradient-bg': "url('../../public/bg-gradient.svg')",
+      },
       colors: {
         black: '#111111',
         gray: '#656262',

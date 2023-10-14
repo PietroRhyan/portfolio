@@ -15,7 +15,7 @@ export function Navbar() {
   const { isOpen, switchVisibility } = MobileMenu()
 
   return (
-    <div className="w-full py-3 px-8 flex items-center justify-between">
+    <header className="w-full py-3 px-8 flex items-center justify-between">
       <Link
         href="/"
         className="buttons-outline rounded-md flex items-center justify-center cursor-pointer"
@@ -47,6 +47,6 @@ export function Navbar() {
         <ThemeSwitcher />
         <CommandShortcut />
       </div>
-    </div>
+    </header>
   )
 }
