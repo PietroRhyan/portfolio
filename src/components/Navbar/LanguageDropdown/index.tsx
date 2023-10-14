@@ -51,7 +51,7 @@ export function LanguageDropdown() {
       {openDropdown && (
         <div
           ref={popupRef}
-          className="absolute top-12 right-0 border border-lightgray rounded-lg w-[140px]"
+          className="absolute z-10 top-12 right-0 border border-lightgray rounded-lg w-[140px]"
         >
           <ul className="divide-y divide-lightgray">
             {languages.map((lang) => (

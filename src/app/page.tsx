@@ -6,7 +6,7 @@ import { FiArrowRight } from 'react-icons/fi'
 export default function Home() {
   return (
     <div>
-      <div className="flex items-center mx-auto justify-center object-center relative mb-14">
+      <div className="flex items-center mx-auto justify-center object-center relative mb-24 sm:mb-14">
         <Image
           src={'./bg-gradient.svg'}
           alt=""
@@ -17,19 +17,17 @@ export default function Home() {
         />
 
         <div className="absolute top-20 flex flex-col items-center justify-center">
-          <h1 className="text-poppins text-6xl bg-gradient-to-r text-transparent bg-clip-text from-[#E90A4D] to-[#EB551590] ">
+          <h1 className="text-poppins text-center text-4xl md:text-6xl bg-gradient-to-r text-transparent bg-clip-text from-[#E90A4D] to-[#EB551590] ">
             Pietro Rhyan
           </h1>
-          <p className="text-base font-bold mt-1 text-black">
-            Software Engineer
-          </p>
-          <p className="text-base font-medium text-gray mt-3 max-w-[500px] text-center">
+          <p className="text-sm font-bold mt-1 text-black">Software Engineer</p>
+          <p className="text-sm font-medium text-gray mt-3 max-w-[500px] text-center px-4">
             Pationate about technology and to learn how to do hard things using
             programming
           </p>
           <Link
             href="#"
-            className="mt-6 flex items-center group text-sm text-black font-bold"
+            className="mt-6 flex items-center group text-xs sm:text-sm text-black font-bold"
           >
             see more about me
             <span className="pl-1 group-hover:pl-2 transition-all duration-200 ">
