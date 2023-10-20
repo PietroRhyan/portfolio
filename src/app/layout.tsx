@@ -1,7 +1,8 @@
 import { Navbar } from '@/components/Navbar'
 import '../styles/globals.css'
 import type { Metadata } from 'next'
-import { Inter, Poppins } from 'next/font/google'
+// eslint-disable-next-line camelcase
+import { Inter, Poppins, Krona_One } from 'next/font/google'
 import { HandleMobileMenuProvider } from '../../context/HandleOpenMobileMenu'
 import { Footer } from '@/components/Footer'
 
@@ -10,6 +11,11 @@ const poppins = Poppins({
   subsets: ['latin'],
   weight: '700',
   variable: '--font-poppins',
+})
+const kronaOne = Krona_One({
+  subsets: ['latin'],
+  weight: '400',
+  variable: '--font-krona',
 })
 
 export const metadata: Metadata = {
@@ -32,7 +38,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} ${poppins.variable}`}>
+      <body
+        className={`${inter.className} ${poppins.variable} ${kronaOne.variable}`}
+      >
         <HandleMobileMenuProvider>
           <Navbar />
           {children}

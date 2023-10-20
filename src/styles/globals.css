@@ -10,10 +10,14 @@
 
 body {
   background: #FFF;
-  color: #111;
+  color: #111111;
 }
 
 .text-poppins {
   font-family: var(--font-poppins);
+}
+
+.text-krona {
+  font-family: var(--font-krona);
 }
 
