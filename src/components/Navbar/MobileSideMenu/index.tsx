@@ -16,22 +16,22 @@ import { MenuType } from '../CentralMenu'
 export const menus: MenuType[] = [
   {
     title: 'About',
-    url: '#',
+    route: '/about',
     icon: <FiInfo size={16} />,
   },
   {
     title: 'Projects',
-    url: '#',
+    route: '/projects',
     icon: <FiBox size={16} />,
   },
   {
     title: 'Blog',
-    url: '#',
+    route: '#',
     icon: <FiEdit2 size={16} />,
   },
   {
     title: 'Uses',
-    url: '#',
+    route: '#',
     icon: <FiMonitor size={16} />,
   },
 ]
@@ -62,7 +62,7 @@ export function MobileSideMenu() {
             {menus.map((menu) => (
               <li key={menu.title}>
                 <Link
-                  href={'#'}
+                  href={menu.route}
                   className="text-base font-medium text-text-gray rounded-lg hover:text-black transition-colors duration-200 cursor-pointer flex items-center gap-2"
                 >
                   {menu.icon}
@@ -76,11 +76,11 @@ export function MobileSideMenu() {
         <div>
           <h4 className="mb-3 text-sm text-gray">Tools</h4>
           <ul className="flex flex-col items-start gap-2">
-            <p className="buttons-outline text-md font-semibold text-text-gray rounded-lg hover:text-black transition-colors duration-200 cursor-pointer flex items-center gap-1">
+            <p className="text-md font-semibold text-text-gray rounded-lg hover:text-black transition-colors duration-200 cursor-pointer flex items-center gap-1">
               English
               <FiChevronDown size={16} />
             </p>
-            <p className="buttons-outline text-md font-semibold text-text-gray rounded-lg hover:text-black transition-colors duration-200 cursor-pointer flex items-center gap-1">
+            <p className="text-md font-semibold text-text-gray rounded-lg hover:text-black transition-colors duration-200 cursor-pointer flex items-center gap-1">
               Theme dark
             </p>
           </ul>

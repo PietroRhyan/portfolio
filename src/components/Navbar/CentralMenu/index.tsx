@@ -1,42 +1,54 @@
 import Link from 'next/link'
 import { ReactNode } from 'react'
 
+import { usePathname } from 'next/navigation'
+import { motion } from 'framer-motion'
+
 export interface MenuType {
   title: string
-  url: string
+  route: string
   icon?: ReactNode
 }
 
 export const menus: MenuType[] = [
   {
     title: 'About',
-    url: '#',
+    route: '/about',
   },
   {
     title: 'Projects',
-    url: '#',
+    route: '/projects',
   },
   {
     title: 'Blog',
-    url: '#',
+    route: '#',
   },
   {
     title: 'Uses',
-    url: '#',
+    route: '#',
   },
 ]
 
 export function CentralMenu() {
+  const router = usePathname()
+
   return (
     <nav className="md:flex hidden md:items-center md:justify-center gap-1 absolute left-1/2 -translate-x-1/2">
       {menus.map((menu) => (
-        <li key={menu.title} className="list-none">
+        <li key={menu.title} className="list-none flex flex-col items-center">
           <Link
-            href={'#'}
-            className="hover:bg-lightgray text-base font-medium py-[10px] px-4 rounded-lg text-text-gray hover:text-black transition-colors duration-200 cursor-pointer"
+            href={menu.route}
+            data-active={router === menu.route}
+            className="hover:bg-lightgray text-base font-medium py-2 px-4 rounded-lg text-text-gray data-[active=true]:text-black hover:text-black transition-colors duration-200 cursor-pointer"
           >
             {menu.title}
           </Link>
+          {router === menu.route ? (
+            <motion.div
+              className="w-[25px] border-t border-black"
+              layoutId="underline"
+            />
+          ) : null}
         </li>
       ))}
     </nav>

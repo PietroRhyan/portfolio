@@ -26,7 +26,7 @@ export default function Home() {
             programming
           </p>
           <Link
-            href="#"
+            href="/about"
             className="mt-6 flex items-center group text-xs sm:text-sm text-black font-bold underline underline-offset-2"
           >
             see more about me

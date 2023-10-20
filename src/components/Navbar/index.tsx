@@ -18,7 +18,7 @@ export function Navbar() {
     <header className="w-full py-3 px-8 flex items-center justify-between">
       <Link
         href="/"
-        className="buttons-outline rounded-md flex items-center justify-center cursor-pointer"
+        className="rounded-md flex items-center justify-center cursor-pointer"
       >
         <Image
           src="/portfolio-logo-black.svg"
