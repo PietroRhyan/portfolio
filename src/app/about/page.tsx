@@ -5,6 +5,13 @@ import { ActionButton } from '@/components/ActionButton'
 import { HiOutlineMail } from 'react-icons/hi'
 import { FiDownload } from 'react-icons/fi'
 
+interface MainStackType {
+  name: string
+  icon: string
+}
+
+const mainStack: MainStackType[] = []
+
 export default function About() {
   return (
     <main className="max-w-5xl mx-auto mt-10 mb-12">
@@ -48,9 +55,9 @@ export default function About() {
             <p className="text-sm lg:text-base text-center slg:text-left">
               Hi, I&apos; am Pietro Rhyan, a
             </p>
-            <h3 className="text-center leading-normal slg:text-left text-poppins font-bold text-3xl lg:text-[40px] bg-gradient-to-br text-transparent from-[#101010] via-[#545454] to-[#888888] bg-clip-text">
+            <h2 className="text-center leading-normal slg:text-left text-poppins font-bold text-3xl lg:text-[40px] bg-gradient-to-br text-transparent from-[#101010] via-[#545454] to-[#888888] bg-clip-text">
               Software Engineer
-            </h3>
+            </h2>
 
             <div className="flex flex-col gap-3 text-center slg:text-left">
               <p className="text-sm lg:text-base">
@@ -84,6 +91,11 @@ export default function About() {
             />
           </div>
         </div>
+      </section>
+
+      <section>
+        <h4>a real developer should never be tied on to just one stack</h4>
+        <h2>thats my main stack</h2>
       </section>
     </main>
   )
