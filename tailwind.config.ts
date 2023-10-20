@@ -9,7 +9,8 @@ const config: Config = {
       },
       colors: {
         black: '#111111',
-        gray: '#656262',
+        'text-gray': '#656262',
+        'text-lightgray': '#B3B3B3',
         lightgray: '#EFEFEF',
         white: '#FFFFFF',
 

@@ -42,7 +42,7 @@ export function LanguageDropdown() {
         id="language-dropdown"
         onClick={() => setOpenDropdown(!openDropdown)}
         data-isopen={openDropdown}
-        className="buttons-outline flex items-center justify-center data-[isopen=true]:bg-lightgray data-[isopen=true]:text-black gap-1 cursor-pointer text-gray font-medium hover:text-black transition-colors duration-200 py-[10px] pl-4 pr-3 rounded-lg hover:bg-lightgray"
+        className="buttons-outline flex items-center justify-center data-[isopen=true]:bg-lightgray gap-1 cursor-pointer text-black font-medium transition-colors duration-200 py-[10px] pl-4 pr-3 rounded-lg hover:bg-lightgray"
       >
         <h4>{isSelected}</h4>
         <FiChevronDown size={16} />

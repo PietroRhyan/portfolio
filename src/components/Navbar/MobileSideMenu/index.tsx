@@ -11,6 +11,30 @@ import {
   FiChevronDown,
 } from 'react-icons/fi'
 import Link from 'next/link'
+import { MenuType } from '../CentralMenu'
+
+export const menus: MenuType[] = [
+  {
+    title: 'About',
+    url: '#',
+    icon: <FiInfo size={16} />,
+  },
+  {
+    title: 'Projects',
+    url: '#',
+    icon: <FiBox size={16} />,
+  },
+  {
+    title: 'Blog',
+    url: '#',
+    icon: <FiEdit2 size={16} />,
+  },
+  {
+    title: 'Uses',
+    url: '#',
+    icon: <FiMonitor size={16} />,
+  },
+]
 
 export function MobileSideMenu() {
   const { isOpen, switchVisibility } = MobileMenu()
@@ -33,47 +57,30 @@ export function MobileSideMenu() {
         </div>
 
         <div className="border-b border-lightgray pb-4 pt-2 mb-4">
-          <h4 className="mb-3 text-sm text-gray">Pages</h4>
+          <h4 className="mb-3 text-sm text-text-gray">Pages</h4>
           <ul className="flex flex-col items-start gap-2">
-            <Link
-              href={'#'}
-              className="buttons-outline text-md font-medium text-gray rounded-lg hover:text-black transition-colors duration-200 cursor-pointer flex items-center gap-2"
-            >
-              <FiInfo size={16} />
-              About
-            </Link>
-            <Link
-              href={'#'}
-              className="buttons-outline text-md font-medium text-gray rounded-lg hover:text-black transition-colors duration-200 cursor-pointer flex items-center gap-2"
-            >
-              <FiBox size={16} />
-              Projects
-            </Link>
-            <Link
-              href={'#'}
-              className="buttons-outline text-md font-medium text-gray rounded-lg hover:text-black transition-colors duration-200 cursor-pointer flex items-center gap-2"
-            >
-              <FiEdit2 size={16} />
-              Blog
-            </Link>
-            <Link
-              href={'#'}
-              className="buttons-outline text-md font-medium text-gray rounded-lg hover:text-black transition-colors duration-200 cursor-pointer flex items-center gap-2"
-            >
-              <FiMonitor size={16} />
-              Uses
-            </Link>
+            {menus.map((menu) => (
+              <li key={menu.title}>
+                <Link
+                  href={'#'}
+                  className="text-base font-medium text-text-gray rounded-lg hover:text-black transition-colors duration-200 cursor-pointer flex items-center gap-2"
+                >
+                  {menu.icon}
+                  {menu.title}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
 
         <div>
           <h4 className="mb-3 text-sm text-gray">Tools</h4>
           <ul className="flex flex-col items-start gap-2">
-            <p className="buttons-outline text-md font-semibold text-gray rounded-lg hover:text-black transition-colors duration-200 cursor-pointer flex items-center gap-1">
+            <p className="buttons-outline text-md font-semibold text-text-gray rounded-lg hover:text-black transition-colors duration-200 cursor-pointer flex items-center gap-1">
               English
               <FiChevronDown size={16} />
             </p>
-            <p className="buttons-outline text-md font-semibold text-gray rounded-lg hover:text-black transition-colors duration-200 cursor-pointer flex items-center gap-1">
+            <p className="buttons-outline text-md font-semibold text-text-gray rounded-lg hover:text-black transition-colors duration-200 cursor-pointer flex items-center gap-1">
               Theme dark
             </p>
           </ul>

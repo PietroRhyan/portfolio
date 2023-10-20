@@ -29,7 +29,6 @@ export function Navbar() {
       </Link>
 
       {/* Only appears before 768px */}
-
       <button
         className="md:hidden block py-2 px-2 rounded-md hover:bg-lightgray transition-colors duration-200"
         onClick={() => switchVisibility(true)}
