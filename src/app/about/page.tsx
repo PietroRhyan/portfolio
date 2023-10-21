@@ -4,6 +4,7 @@ import { ActionButton } from '@/components/ActionButton'
 
 import { HiOutlineMail } from 'react-icons/hi'
 import { FiDownload } from 'react-icons/fi'
+import Link from 'next/link'
 
 interface MainStackType {
   name: string
@@ -68,9 +69,16 @@ export default function About() {
               </p>
               <p className="text-sm lg:text-base">
                 Actually I&apos; am working on a collaborative side-hustle with
-                my university friends, the Fros Venture. My principal stack
-                nowadays is <b>Javascript</b>, <b>Typescript</b>, <b>ReactJS</b>{' '}
-                and <b>NodeJS</b>.
+                my university friends, the{' '}
+                <Link
+                  href="https://fros.dev/"
+                  target="_blank"
+                  className="underline"
+                >
+                  Fros Venture
+                </Link>
+                . My principal stack nowadays is <b>Javascript</b>,{' '}
+                <b>Typescript</b>, <b>ReactJS</b> and <b>NodeJS</b>.
               </p>
               <p className="text-sm lg:text-base">
                 I&apos; am available to remote work or freelance, contact me 😀
