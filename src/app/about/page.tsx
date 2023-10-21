@@ -6,17 +6,89 @@ import { HiOutlineMail } from 'react-icons/hi'
 import { FiDownload } from 'react-icons/fi'
 import Link from 'next/link'
 
-interface MainStackType {
+interface TechsType {
   name: string
   icon: string
 }
 
-const mainStack: MainStackType[] = []
+const mainStack: TechsType[] = [
+  {
+    name: 'JavaScript',
+    icon: './tech-logos/javascript.svg',
+  },
+  {
+    name: 'TypeScript',
+    icon: './tech-logos/typescript.svg',
+  },
+  {
+    name: 'ReactJS',
+    icon: './tech-logos/react.svg',
+  },
+  {
+    name: 'TailwindCSS',
+    icon: './tech-logos/tailwind.svg',
+  },
+  {
+    name: 'NextJS',
+    icon: './tech-logos/next.svg',
+  },
+  {
+    name: 'NodeJS',
+    icon: './tech-logos/node.svg',
+  },
+  {
+    name: 'PostgresSQL',
+    icon: './tech-logos/postgres.svg',
+  },
+  {
+    name: 'Prisma.io',
+    icon: '/tech-logos/prisma.png',
+  },
+  {
+    name: 'Docker',
+    icon: './tech-logos/docker.svg',
+  },
+]
+
+const otherTechs: TechsType[] = [
+  {
+    name: 'C++',
+    icon: './tech-logos/cplus.svg',
+  },
+  {
+    name: 'C#',
+    icon: './tech-logos/csharp.svg',
+  },
+  {
+    name: 'Python',
+    icon: './tech-logos/python.svg',
+  },
+  {
+    name: 'Java',
+    icon: './tech-logos/java.svg',
+  },
+  {
+    name: 'Angular',
+    icon: './tech-logos/angular.svg',
+  },
+  {
+    name: 'AWS',
+    icon: './tech-logos/aws.svg',
+  },
+  {
+    name: 'MySQL',
+    icon: './tech-logos/mysql.svg',
+  },
+  {
+    name: 'Firebase',
+    icon: './tech-logos/firebase.svg',
+  },
+]
 
 export default function About() {
   return (
     <main className="max-w-5xl mx-auto mt-10 mb-12">
-      <section className="flex flex-col items-center slg:flex-row slg:justify-center slg:items-start slg:gap-24 gap-8">
+      <section className="flex flex-col items-center slg:flex-row slg:justify-center slg:items-start slg:gap-24 gap-8 mb-24">
         <div className="relative w-[300px] shadow-photo rounded-xl custom:ml-11">
           <Image
             src={myPicture}
@@ -101,9 +173,45 @@ export default function About() {
         </div>
       </section>
 
-      <section>
-        <h4>a real developer should never be tied on to just one stack</h4>
-        <h2>thats my main stack</h2>
+      <section className="flex flex-col items-center">
+        <h4 className="text-center text-sm font-semibold">
+          a real developer should never be tied on to just one stack
+        </h4>
+        <h2 className="text-poppins mb-2 leading-tight font-bold text-3xl slg:text-[40px] text-center text-transparent bg-gradient-to-r from-[#2A8D08] via-[#8EBA0E] to-[#F2E713] bg-clip-text">
+          thats my main stack
+        </h2>
+        <div className="flex items-center justify-center gap-3 flex-wrap mb-8">
+          {mainStack.map((tech) => (
+            <div key={tech.name} data-title={tech.name} className="relative">
+              <Image
+                src={tech.icon}
+                alt={tech.name}
+                width={32}
+                height={32}
+                draggable={false}
+                aria-description={tech.name}
+              />
+            </div>
+          ))}
+        </div>
+
+        <h4 className="text-center text-sm font-semibold mb-2">
+          but I also have worked with
+        </h4>
+        <div className="flex items-center justify-center gap-3 flex-wrap">
+          {otherTechs.map((tech) => (
+            <div key={tech.name} data-title={tech.name} className="relative">
+              <Image
+                src={tech.icon}
+                alt={tech.name}
+                width={32}
+                height={32}
+                draggable={false}
+                aria-description={tech.name}
+              />
+            </div>
+          ))}
+        </div>
       </section>
     </main>
   )

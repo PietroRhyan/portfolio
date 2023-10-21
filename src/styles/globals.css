@@ -13,6 +13,33 @@ body {
   color: #111111;
 }
 
+/* Create the tooltip */
+[data-title]:hover:after {
+  opacity: 1;
+  transition: all 200ms ;
+  visibility: visible;
+  cursor: help;
+}
+
+[data-title]:after {
+  content: attr(data-title);
+  font-size: 0.75rem;
+  font-weight: 400;
+  position: absolute;
+  padding: 2px 6px;
+  top: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  opacity: 0;
+  z-index: 5;
+  visibility: hidden;
+  border-radius: 4px;
+  cursor: help;
+  background: #111111;
+  color: #EFEFEF;
+}
+
 .text-poppins {
   font-family: var(--font-poppins);
 }
