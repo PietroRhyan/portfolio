@@ -63,6 +63,7 @@ export function MobileSideMenu() {
               <li key={menu.title}>
                 <Link
                   href={menu.route}
+                  onClick={() => switchVisibility(false)}
                   className="text-base font-medium text-text-gray rounded-lg hover:text-black transition-colors duration-200 cursor-pointer flex items-center gap-2"
                 >
                   {menu.icon}

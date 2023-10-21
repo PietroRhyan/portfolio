@@ -137,6 +137,7 @@ export default function About() {
               alt="Picture of Pietro Rhyan"
               draggable={false}
               className="rounded-xl"
+              priority
             />
 
             <div className="hidden absolute shadow-experience-card top-8 -left-11 rounded-xl custom-sm:flex items-center justify-center gap-1 bg-gradient-to-br from-[#E1F1F5] to-[#22D3FA] px-4 py-2">
@@ -381,7 +382,7 @@ export default function About() {
         />
       </section>
 
-      <section className="flex flex-col items-center justify-center gap-6 px-4 sm:px-8">
+      <section className="flex flex-col items-center justify-center gap-6 px-4 sm:px-8 mb-16">
         <div>
           <h4 className="text-center text-xs sm:text-sm font-semibold">
             When I create a new software, I
@@ -404,6 +405,137 @@ export default function About() {
         </div>
 
         <hr className="w-[250px] bg-lightgray" />
+      </section>
+
+      <section className="flex flex-col items-center justify-center lg:flex-row lg:justify-center lg:items-start gap-8 px-4 sm:px-8 mb-16">
+        <div className="flex w-fit flex-col items-center justify-center lg:items-end">
+          <h2 className="text-poppins text-center lg:text-end leading-tight font-bold text-3xl slg:text-[40px] text-transparent bg-clip-text bg-gradient-to-r from-[#E93D07] to-[#EF9E00]">
+            Experiences
+          </h2>
+          <h2 className="text-poppins text-center lg:text-end leading-tight font-bold text-3xl slg:text-[40px] text-transparent bg-clip-text bg-gradient-to-r from-[#0241E3] to-[#B300F2]">
+            academic qualifications
+          </h2>
+          <h2 className="text-poppins text-center lg:text-end leading-tight font-bold text-3xl slg:text-[40px] text-transparent bg-clip-text bg-gradient-to-r from-[#FB0A8C] to-[#EC5858]">
+            awards
+          </h2>
+          <h4 className="font-semibold text-center lg:text-end slg:text-sm">
+            and more
+          </h4>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-[100px_1fr] pt-2 gap-1 sm:gap-5">
+          {/* JOBS */}
+          <h5 className="text-sm text-text-lightgray sm:text-end font-medium">
+            jobs:
+          </h5>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 custom-lgp:grid-cols-2 gap-2 sm:gap-4 mb-5 sm:mb-0">
+            <div className="w-[230px]">
+              <h4 className="text-sm font-semibold">Computer Technician</h4>
+              <p className="text-xs font-medium">Secretaria de Educação</p>
+              <span className="text-xs font-medium text-text-gray mt-[6px]">
+                Mar 2022 - Sep 2023 · 1yr 7mo
+              </span>
+            </div>
+            <div className="w-[230px]">
+              <h4 className="text-sm font-semibold">Front-en Developer</h4>
+              <p className="text-xs font-medium">Fros Venture</p>
+              <span className="text-xs font-medium text-text-gray mt-[6px]">
+                Oct 2022 - at moment · 1yr 8mo
+              </span>
+            </div>
+          </div>
+
+          {/* QUALIFICATIONS */}
+          <h5 className="text-sm text-text-lightgray sm:text-end font-medium">
+            qualifications:
+          </h5>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 custom-lgp:grid-cols-2 gap-2 sm:gap-4 mb-5 sm:mb-0">
+            <div className="w-[230px]">
+              <h4 className="text-sm font-semibold">
+                IFBA - Instituto Federal da Bahia
+              </h4>
+              <p className="text-xs font-medium">
+                Computer Technician - IT & High shool
+              </p>
+              <span className="text-xs font-medium text-text-gray mt-[6px]">
+                2017 - 2021
+              </span>
+            </div>
+            <div className="w-[230px]">
+              <h4 className="text-sm font-semibold">UniAges</h4>
+              <p className="text-xs font-medium">
+                Bachelor&apos; Degree in Computer Science
+              </p>
+              <span className="text-xs font-medium text-text-gray mt-[6px]">
+                2021.2 - at moment
+              </span>
+            </div>
+          </div>
+
+          {/* CERTIFICATES */}
+          <h5 className="text-sm text-text-lightgray sm:text-end font-medium">
+            certificates:
+          </h5>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 custom-lgp:grid-cols-2 gap-2 sm:gap-4 mb-5 sm:mb-0">
+            <div className="w-[230px]">
+              <h4 className="text-sm font-semibold">
+                Ignite React Trail by Rocketseat
+              </h4>
+              <span className="text-xs font-medium text-text-gray mt-[6px]">
+                100hr
+              </span>
+            </div>
+            <div className="w-[230px]">
+              <h4 className="text-sm font-semibold">
+                Ignite Node Trail by Rocketseat
+              </h4>
+              <span className="text-xs font-medium text-text-gray mt-[6px]">
+                100hr
+              </span>
+            </div>
+            <div className="w-[230px]">
+              <h4 className="text-sm font-semibold">
+                PCA: Essential Python Programming Concepts by Cisco
+              </h4>
+              <span className="text-xs font-medium text-text-gray mt-[6px]">
+                75hr
+              </span>
+            </div>
+          </div>
+
+          {/* AWARDS */}
+          <h5 className="text-sm text-text-lightgray sm:text-end font-medium">
+            awards:
+          </h5>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 custom-lgp:grid-cols-2 gap-2 sm:gap-4 mb-5 sm:mb-0">
+            <div className="w-[230px]">
+              <h4 className="text-sm font-semibold">
+                IFBA - Insitituto Federal da Bahia
+              </h4>
+              <p className="text-xs font-medium">
+                Vice-champion in Programming Championship
+              </p>
+              <span className="text-xs font-medium text-text-gray mt-[6px]">
+                2018
+              </span>
+            </div>
+          </div>
+
+          {/*  */}
+          <h5 className="text-sm text-text-lightgray sm:text-end font-medium">
+            languages:
+          </h5>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 custom-lgp:grid-cols-2 gap-2 sm:gap-4 mb-5 sm:mb-0">
+            <div className="w-[230px]">
+              <h4 className="text-sm font-semibold">PT-BR</h4>
+              <p className="text-xs font-medium">Native</p>
+            </div>
+            <div className="w-[230px]">
+              <h4 className="text-sm font-semibold">EN-US</h4>
+              <p className="text-xs font-medium">Advanced</p>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
   )
