@@ -24,11 +24,12 @@ const config: Config = {
     },
     screens: {
       sm: '480px',
-      custom: '510px',
+      'custom-sm': '510px',
       md: '768px',
       slg: '845px',
       lg: '976px',
       lgp: '1024px',
+      'custom-lgp': '1135px',
       xl: '1440px',
     },
   },

@@ -48,7 +48,7 @@ export function MobileSideMenu() {
         animate={isOpen ? { opacity: 0.3 } : { opacity: 0 }}
         onClick={() => switchVisibility(false)}
       ></motion.div>
-      <motion.div className="absolute z-50 top-0 right-0 ml-auto bg-white h-screen w-[220px] p-4">
+      <motion.div className="fixed z-50 top-0 right-0 ml-auto bg-white h-screen w-[220px] p-4">
         <div
           onClick={() => switchVisibility(false)}
           className="w-fit absolute right-4 top-4 block p-2 text-black rounded-md hover:bg-lightgray transition-colors cursor-pointer duration-200"
