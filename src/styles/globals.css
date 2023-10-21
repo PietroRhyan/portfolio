@@ -16,7 +16,7 @@ body {
 /* Create the tooltip */
 [data-title]:hover:after {
   opacity: 1;
-  transition: all 200ms ;
+  transition: all 200ms;
   visibility: visible;
   cursor: help;
 }

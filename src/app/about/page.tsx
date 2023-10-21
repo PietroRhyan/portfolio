@@ -3,90 +3,126 @@ import myPicture from '../../../public/image/my-image.png'
 import { ActionButton } from '@/components/ActionButton'
 
 import { HiOutlineMail } from 'react-icons/hi'
-import { FiDownload } from 'react-icons/fi'
+import { FiDownload, FiUser, FiMonitor } from 'react-icons/fi'
 import Link from 'next/link'
 import { TechsIcons } from '@/components/TechsIcons'
 
 import timeline from '../../../public/image/timeline.svg'
 import bgGradient from '../../../public/timeline-bg-gradient.svg'
 import bgGradient2 from '../../../public/timeline-bg-gradient2.svg'
+import { SkillsCard } from '@/components/SkillsCard'
+
+import { FaPencil } from 'react-icons/fa6'
+import { FaRegHandshake } from 'react-icons/fa'
+import { ReactNode } from 'react'
 
 interface TechsType {
   name: string
-  icon: string
+  imageURL: string
+}
+
+interface SkilssType {
+  title: string
+  content: string
+  icon: ReactNode
 }
 
 const mainStack: TechsType[] = [
   {
     name: 'JavaScript',
-    icon: './tech-logos/javascript.svg',
+    imageURL: './tech-logos/javascript.svg',
   },
   {
     name: 'TypeScript',
-    icon: './tech-logos/typescript.svg',
+    imageURL: './tech-logos/typescript.svg',
   },
   {
     name: 'ReactJS',
-    icon: './tech-logos/react.svg',
+    imageURL: './tech-logos/react.svg',
   },
   {
     name: 'TailwindCSS',
-    icon: './tech-logos/tailwind.svg',
+    imageURL: './tech-logos/tailwind.svg',
   },
   {
     name: 'NextJS',
-    icon: './tech-logos/next.svg',
+    imageURL: './tech-logos/next.svg',
   },
   {
     name: 'NodeJS',
-    icon: './tech-logos/node.svg',
+    imageURL: './tech-logos/node.svg',
   },
   {
     name: 'PostgresSQL',
-    icon: './tech-logos/postgres.svg',
+    imageURL: './tech-logos/postgres.svg',
   },
   {
     name: 'Prisma.io',
-    icon: '/tech-logos/prisma.png',
+    imageURL: '/tech-logos/prisma.png',
   },
   {
     name: 'Docker',
-    icon: './tech-logos/docker.svg',
+    imageURL: './tech-logos/docker.svg',
   },
 ]
 
 const otherTechs: TechsType[] = [
   {
     name: 'C++',
-    icon: './tech-logos/cplus.svg',
+    imageURL: './tech-logos/cplus.svg',
   },
   {
     name: 'C#',
-    icon: './tech-logos/csharp.svg',
+    imageURL: './tech-logos/csharp.svg',
   },
   {
     name: 'Python',
-    icon: './tech-logos/python.svg',
+    imageURL: './tech-logos/python.svg',
   },
   {
     name: 'Java',
-    icon: './tech-logos/java.svg',
+    imageURL: './tech-logos/java.svg',
   },
   {
     name: 'Angular',
-    icon: './tech-logos/angular.svg',
+    imageURL: './tech-logos/angular.svg',
   },
   {
     name: 'AWS',
-    icon: './tech-logos/aws.svg',
+    imageURL: './tech-logos/aws.svg',
   },
   {
     name: 'MySQL',
-    icon: './tech-logos/mysql.svg',
+    imageURL: './tech-logos/mysql.svg',
   },
   {
     name: 'Firebase',
-    icon: './tech-logos/firebase.svg',
+    imageURL: './tech-logos/firebase.svg',
+  },
+]
+
+const skills: SkilssType[] = [
+  {
+    title: 'UI',
+    content:
+      'I create elegant, modern websites consistent with the project proposal',
+    icon: <FaPencil size={16} />,
+  },
+  {
+    title: 'UX',
+    content: 'Performing, interactive, responsive and accessible websites',
+    icon: <FiUser size={16} />,
+  },
+  {
+    title: 'SEO',
+    content: 'Improved SEO to facilitate web bots',
+    icon: <FiMonitor size={16} />,
+  },
+  {
+    title: 'Good Practices',
+    content:
+      'Good programming practices, both in the frontend and backend, using process such as TDD, Clean Architeture and more',
+    icon: <FaRegHandshake size={16} />,
   },
 ]
 
@@ -182,7 +218,7 @@ export default function About() {
 
         <section className="flex flex-col items-center mb-24">
           <h4 className="text-center text-xs sm:text-sm font-semibold">
-            a real developer should never be tied on to just one stack
+            A real developer should never be tied on to just one stack
           </h4>
           <h2 className="text-poppins mb-2 leading-tight font-bold text-3xl slg:text-[40px] text-center text-transparent bg-gradient-to-r from-[#2A8D08] via-[#8EBA0E] to-[#F2E713] bg-clip-text">
             thats my main stack
@@ -192,7 +228,7 @@ export default function About() {
               <TechsIcons
                 key={tech.name}
                 name={tech.name}
-                imageURL={tech.icon}
+                imageURL={tech.imageURL}
               />
             ))}
           </div>
@@ -205,14 +241,14 @@ export default function About() {
               <TechsIcons
                 key={tech.name}
                 name={tech.name}
-                imageURL={tech.icon}
+                imageURL={tech.imageURL}
               />
             ))}
           </div>
         </section>
       </section>
 
-      <section className="w-full bg-black py-10 custom-lgp:pt-10 custom-lgp:h-[300px] relative overflow-hidden">
+      <section className="w-full bg-black px-4 sm:px-8 py-10 custom-lgp:pt-10 custom-lgp:h-[300px] relative overflow-hidden mb-24">
         <h4 className="text-center text-xs sm:text-sm font-semibold text-lightgray mb-10">
           My timeline
         </h4>
@@ -343,6 +379,31 @@ export default function About() {
           draggable={false}
           className="absolute -bottom-[200px] -right-[40px]"
         />
+      </section>
+
+      <section className="flex flex-col items-center justify-center gap-6 px-4 sm:px-8">
+        <div>
+          <h4 className="text-center text-xs sm:text-sm font-semibold">
+            When I create a new software, I
+          </h4>
+          <h2 className="text-poppins text-center leading-tight font-bold text-3xl slg:text-[40px] text-transparent bg-clip-text bg-gradient-to-r from-[#078088] to-[#114EE9] via-[#860181]">
+            focus, prioritize and reinforce
+          </h2>
+          <h4 className="text-center text-xs sm:text-sm font-semibold">the</h4>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          {skills.map((skill) => (
+            <SkillsCard
+              key={skill.title}
+              title={skill.title}
+              icon={skill.icon}
+              content={skill.content}
+            />
+          ))}
+        </div>
+
+        <hr className="w-[250px] bg-lightgray" />
       </section>
     </main>
   )

@@ -14,6 +14,7 @@ const config: Config = {
         lightgray: '#EFEFEF',
         white: '#FFFFFF',
 
+        'dark-blue': '#031F49',
         blue: '#009AF1',
       },
       boxShadow: {
