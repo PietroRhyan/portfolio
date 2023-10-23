@@ -63,9 +63,9 @@ const recycleItStack: TechsType[] = [
 
 export default function Projects() {
   return (
-    <main className="max-w-5xl mt-10 mb-12 mx-auto px-4 sm:px-8">
+    <main className="max-w-5xl mt-10 mb-20 mx-auto px-4 sm:px-8">
       <div className="mb-9">
-        <h2 className="text-poppins font-bold leading-tight text-3xl custom-lgp:text-[40px] text-transparent bg-clip-text bg-gradient-to-r from-[#432371] via-[#9F6976] to-[#FAAE7B]">
+        <h2 className="text-poppins font-bold leading-tight text-3xl custom-lgp:text-[40px] text-transparent bg-clip-text w-fit bg-gradient-to-r from-[#432371] via-[#9F6976] to-[#FAAE7B]">
           Works, Projects and Hobby.
         </h2>
         <h4 className="text-xs sm:text-sm font-semibold">

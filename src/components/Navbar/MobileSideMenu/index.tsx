@@ -31,7 +31,7 @@ export const menus: MenuType[] = [
   },
   {
     title: 'Uses',
-    route: '#',
+    route: '/uses',
     icon: <FiMonitor size={16} />,
   },
 ]
