@@ -21,7 +21,7 @@ export const menus: MenuType[] = [
   },
   {
     title: 'Blog',
-    route: '#',
+    route: '/blog',
   },
   {
     title: 'Uses',

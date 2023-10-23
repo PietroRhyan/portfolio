@@ -26,7 +26,7 @@ export const menus: MenuType[] = [
   },
   {
     title: 'Blog',
-    route: '#',
+    route: '/blog',
     icon: <FiEdit2 size={16} />,
   },
   {
