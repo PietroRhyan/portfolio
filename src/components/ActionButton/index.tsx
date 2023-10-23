@@ -34,23 +34,19 @@ export function ActionButton({
   url,
   buttonStyle,
 }: ActionButtonProps) {
+  if (url) {
+    return (
+      <Link className={button({ buttonStyle })} href={url} target="_blank">
+        {name}
+        {icon || null}
+      </Link>
+    )
+  }
+
   return (
     <button className={button({ buttonStyle })}>
-      {url ? (
-        <Link
-          className="flex items-center justify-center gap-1 "
-          href={url}
-          target="_blank"
-        >
-          {name}
-          {icon || null}
-        </Link>
-      ) : (
-        <>
-          {name}
-          {icon || null}
-        </>
-      )}
+      {name}
+      {icon || null}
     </button>
   )
 }

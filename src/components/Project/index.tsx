@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 import Link from 'next/link'
 import { tv, VariantProps } from 'tailwind-variants'
 import { ActionButton } from '../ActionButton'
@@ -22,6 +22,7 @@ const card = tv({
 interface ProjectProps extends VariantProps<typeof card> {
   name: string
   description: string
+  image: StaticImageData
   logo: string
   siteURL?: string
   githubURL?: string
@@ -31,6 +32,7 @@ interface ProjectProps extends VariantProps<typeof card> {
 export function Project({
   name,
   description,
+  image,
   logo,
   siteURL,
   githubURL,
@@ -39,25 +41,42 @@ export function Project({
 }: ProjectProps) {
   return (
     <div className={card({ projectStyle })}>
-      <div className="w-full h-[210px] rounded-md relative bg-lightgray">
+      <div className="w-full h-[210px] rounded-md relative bg-lightgray overflow-hidden">
+        <Image
+          src={image}
+          fill
+          alt={name}
+          className="absolute"
+          priority
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        />
+        <div className="absolute z-10 back bg-lightgray w-full h-full backdrop-blur-lg opacity-60"></div>
         <Image
           src={logo}
           alt={name}
-          width={100}
-          height={100}
+          width={30}
+          height={30}
           draggable={false}
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 "
+          className="absolute z-20 bottom-3 right-3"
         />
       </div>
       <div className="flex flex-col justify-between">
         <div>
           <div className="flex items-center justify-between mb-2">
             {projectStyle === 'big' ? (
-              <h3 className="font-semibold text-sm custom-sm:text-base">
+              <Link
+                href="#"
+                className="font-semibold text-sm custom-sm:text-base hover:underline hover:underline-offset-2 focus:underline focus:underline-offset-2 "
+              >
                 {name}
-              </h3>
+              </Link>
             ) : (
-              <h3 className="font-semibold text-sm">{name}</h3>
+              <Link
+                href="#"
+                className="font-semibold text-sm hover:underline hover:underline-offset-2 focus:underline focus:underline-offset-2 "
+              >
+                {name}
+              </Link>
             )}
             <div className="flex items-center justify-center gap-2">
               {techs.map((tech) => (
