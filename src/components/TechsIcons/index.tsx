@@ -1,11 +1,28 @@
 import Image from 'next/image'
 
-interface TechIconsProps {
+export interface TechIconsProps {
   name: string
   imageURL: string
+  minimalist?: boolean
 }
 
-export function TechsIcons({ name, imageURL }: TechIconsProps) {
+export function TechsIcons({ name, imageURL, minimalist }: TechIconsProps) {
+  if (minimalist) {
+    return (
+      <div data-title={name} className="relative">
+        <Image
+          src={imageURL}
+          alt={name}
+          width={18}
+          height={18}
+          draggable={false}
+          aria-description={name}
+          style={{ color: '#EFEFEF' }}
+        />
+      </div>
+    )
+  }
+
   return (
     <div data-title={name} className="relative">
       <Image

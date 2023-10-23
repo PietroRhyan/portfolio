@@ -21,6 +21,7 @@ const config: Config = {
         photo: '-6px 6px 0 0 #EFEFEF',
         'experience-card': '5px 5px 16px 0 #18151520',
         'award-card': '-5px 5px 16px 0 #18151520',
+        'project-card': '0 2px 12px -1px #64646425',
       },
     },
     screens: {
