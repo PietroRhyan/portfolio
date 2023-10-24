@@ -20,8 +20,8 @@ export function Post({
 }: PostProps) {
   return (
     <article
-      data-lastPost={isLastPost || false}
-      className="flex flex-col data-[lastPost=false]:border-b pb-6 data-[lastPost=false]:border-lightgray gap-4 custom-sm:flex-row custom-sm:gap-0 justify-between"
+      data-lastpost={isLastPost || false}
+      className="flex flex-col data-[lastpost=false]:border-b pb-6 data-[lastpost=false]:border-lightgray gap-4 custom-sm:flex-row custom-sm:gap-0 justify-between"
     >
       <div className="flex flex-col">
         <Link

@@ -15,7 +15,7 @@ export function Navbar() {
   const { isOpen, switchVisibility } = MobileMenu()
 
   return (
-    <header className="w-full py-3 px-3 sm:px-8 flex items-center justify-between">
+    <header className="w-full py-3 px-3 sm:px-8 flex items-center justify-between absolute z-30 top-0">
       <Link
         href="/"
         className="rounded-md flex items-center justify-center cursor-pointer"
