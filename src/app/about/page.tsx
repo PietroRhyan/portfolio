@@ -171,7 +171,7 @@ export default function About() {
               <p className="text-sm lg:text-base text-center slg:text-left">
                 Hi, I&apos; am Pietro Rhyan, a
               </p>
-              <h2 className="text-center leading-normal slg:text-left text-poppins font-bold text-3xl lg:text-[40px] bg-gradient-to-br text-transparent from-[#333] via-[#545454] to-[#E4E4E5] bg-clip-text">
+              <h2 className="text-center leading-normal slg:text-left text-poppins font-bold text-3xl lg:text-[40px] bg-gradient-to-b text-transparent from-[#101010] dark:from-[#545454] via-[#545454] dark:to-white to-[#E4E4E5] bg-clip-text">
                 Software Engineer
               </h2>
 
