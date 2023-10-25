@@ -11,7 +11,7 @@ export interface ToolsProps {
 export function Tools({ title, uses }: ToolsProps) {
   return (
     <div>
-      <h3 className="mb-[6px] text-2xl font-bold">{title}:</h3>
+      <h3 className="mb-[6px] text-2xl font-bold dark:text-white">{title}:</h3>
 
       <ul className="flex flex-col gap-1">
         {uses.map((item) => (
@@ -21,7 +21,9 @@ export function Tools({ title, uses }: ToolsProps) {
           >
             {item.item}
             {item.description ? (
-              <span className="text-text-lightgray">- {item.description}</span>
+              <span className="text-text-lightgray dark:text-text-gray">
+                {''} - {item.description}
+              </span>
             ) : null}
           </li>
         ))}

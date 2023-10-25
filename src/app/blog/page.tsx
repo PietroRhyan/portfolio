@@ -17,7 +17,7 @@ export default function Blog() {
       </div>
 
       <section className="mb-8">
-        <h4 className="text-xs sm:text-sm font-medium text-text-lightgray mb-4">
+        <h4 className="text-xs sm:text-sm font-medium text-text-lightgray dark:text-text-gray mb-4">
           Projects explanations:
         </h4>
 
@@ -40,7 +40,7 @@ export default function Blog() {
       </section>
 
       <section>
-        <h4 className="text-xs sm:text-sm font-medium text-text-lightgray mb-4">
+        <h4 className="text-xs sm:text-sm font-medium text-text-lightgray dark:text-text-gray mb-4">
           Other posts:
         </h4>
 

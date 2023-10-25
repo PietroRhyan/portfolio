@@ -125,7 +125,7 @@ export default function Uses() {
   return (
     <main className="max-w-5xl mt-20 pt-10 mb-20 mx-auto px-4 sm:px-8">
       <div className="mb-9">
-        <h2 className="text-poppins w-fit font-bold leading-tight text-3xl custom-lgp:text-[40px] text-transparent bg-clip-text bg-gradient-to-r from-[#020344] via-[#155E8D] to-[#28B8D5]">
+        <h2 className="text-poppins w-fit font-bold leading-tight text-3xl custom-lgp:text-[40px] text-transparent bg-clip-text bg-gradient-to-r from-[#87A4FF] via-[#155E8D] to-[#28B8D5]">
           Setup, Tools and Apps.
         </h2>
         <h4 className="text-xs sm:text-sm font-semibold">

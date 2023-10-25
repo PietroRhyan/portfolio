@@ -39,13 +39,13 @@ export function CentralMenu() {
           <Link
             href={menu.route}
             data-active={router === menu.route}
-            className="hover:bg-lightgray text-base font-medium py-2 px-4 rounded-lg text-text-gray data-[active=true]:text-black hover:text-black transition-colors duration-200 cursor-pointer"
+            className="hover:bg-lightgray dark:hover:bg-dark-gray text-base font-medium py-2 px-4 rounded-lg text-text-gray dark:text-text-lightgray data-[active=true]:text-black dark:data-[active=true]:text-white hover:text-black dark:hover:text-white transition-colors duration-200 cursor-pointer"
           >
             {menu.title}
           </Link>
           {router === menu.route ? (
             <motion.div
-              className="w-[25px] border-t border-black"
+              className="w-[25px] border-t border-black dark:border-white"
               layoutId="underline"
             />
           ) : null}

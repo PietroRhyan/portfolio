@@ -4,6 +4,7 @@ import type { Metadata } from 'next'
 // eslint-disable-next-line camelcase
 import { Inter, Poppins, Krona_One } from 'next/font/google'
 import { HandleMobileMenuProvider } from '../../context/HandleOpenMobileMenu'
+import { SwitchThemeProvider } from '../../context/SwitchTheme'
 import { Footer } from '@/components/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -37,15 +38,17 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" id="html">
       <body
-        className={`${inter.className} ${poppins.variable} ${kronaOne.variable}`}
+        className={`${inter.className} ${poppins.variable} ${kronaOne.variable} text-black bg-white dark:text-text-lightgray dark:bg-black-variant `}
       >
-        <HandleMobileMenuProvider>
-          <Navbar />
-          {children}
-          <Footer />
-        </HandleMobileMenuProvider>
+        <SwitchThemeProvider>
+          <HandleMobileMenuProvider>
+            <Navbar />
+            {children}
+            <Footer />
+          </HandleMobileMenuProvider>
+        </SwitchThemeProvider>
       </body>
     </html>
   )

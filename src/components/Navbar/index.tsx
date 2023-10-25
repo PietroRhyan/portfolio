@@ -11,8 +11,13 @@ import { LanguageDropdown } from './LanguageDropdown'
 import { ThemeSwitcher } from './ThemeSwitcher'
 import { CommandShortcut } from './CommandShortcut'
 
+import whiteLogo from '../../../public/portfolio-logo-black.svg'
+import blackLogo from '../../../public/portfolio-logo.svg'
+import { SwitchTheme } from '../../../context/SwitchTheme'
+
 export function Navbar() {
   const { isOpen, switchVisibility } = MobileMenu()
+  const { isInDarkTheme } = SwitchTheme()
 
   return (
     <header className="w-full py-3 px-3 sm:px-8 flex items-center justify-between absolute z-30 top-0">
@@ -21,7 +26,7 @@ export function Navbar() {
         className="rounded-md flex items-center justify-center cursor-pointer"
       >
         <Image
-          src="/portfolio-logo-black.svg"
+          src={isInDarkTheme ? blackLogo : whiteLogo}
           width={50}
           height={64}
           alt="Portfolio logo"
@@ -42,7 +47,7 @@ export function Navbar() {
       <CentralMenu />
 
       <div className="md:flex hidden md:items-center md:justify-center gap-2">
-        <LanguageDropdown />
+        <LanguageDropdown buttonStyle="bigButton" />
         <ThemeSwitcher />
         <CommandShortcut />
       </div>

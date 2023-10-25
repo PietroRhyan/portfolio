@@ -18,8 +18,8 @@ export function SkillsCard({ title, content, icon }: SkillsCardProps) {
           </div>
           <h3 className="text-blue text-sm font-semibold">{title}</h3>
         </div>
-        <div className="w-full min-h-[92px] bg-white flex items-center justify-center">
-          <p className="text-xs text-dark-blue font-semibold text-center">
+        <div className="w-full min-h-[92px] bg-white dark:bg-black-variant flex items-center justify-center">
+          <p className="text-xs text-dark-blue dark:text-text-lightgray font-semibold text-center">
             {content}
           </p>
         </div>

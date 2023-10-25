@@ -21,12 +21,12 @@ export function Post({
   return (
     <article
       data-lastpost={isLastPost || false}
-      className="flex flex-col data-[lastpost=false]:border-b pb-6 data-[lastpost=false]:border-lightgray gap-4 custom-sm:flex-row custom-sm:gap-0 justify-between"
+      className="flex flex-col data-[lastpost=false]:border-b pb-6 data-[lastpost=false]:border-lightgray dark:data-[lastpost=false]:border-dark-gray gap-4 custom-sm:flex-row custom-sm:gap-0 justify-between"
     >
       <div className="flex flex-col">
         <Link
           href={postURL}
-          className="text-sm sm:text-base font-bold hover:underline hover:underline-offset-2"
+          className="text-sm sm:text-base font-bold dark:text-white hover:underline hover:underline-offset-2"
         >
           {title}
         </Link>

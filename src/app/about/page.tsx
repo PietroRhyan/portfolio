@@ -121,7 +121,7 @@ const skills: SkilssType[] = [
   {
     title: 'Good Practices',
     content:
-      'Good programming practices, both in the frontend and backend, using process such as TDD, Clean Architeture and more',
+      'Good programming practices, using process such as TDD, Clean Architeture and more',
     icon: <FaRegHandshake size={16} />,
   },
 ]
@@ -131,7 +131,7 @@ export default function About() {
     <main className="mt-20 pt-10 mb-20 ">
       <section className="max-w-5xl mx-auto px-4 sm:px-8">
         <section className="flex flex-col items-center slg:flex-row slg:justify-center slg:items-start slg:gap-24 gap-8 mb-24">
-          <div className="relative w-[300px] shadow-photo rounded-xl custom-sm:ml-11">
+          <div className="relative w-[300px] shadow-photo dark:shadow-dark-photo rounded-xl custom-sm:ml-11">
             <Image
               src={myPicture}
               alt="Picture of Pietro Rhyan"
@@ -140,8 +140,8 @@ export default function About() {
               priority
             />
 
-            <div className="hidden absolute shadow-experience-card top-8 -left-11 rounded-xl custom-sm:flex items-center justify-center gap-1 bg-gradient-to-br from-[#E1F1F5] to-[#22D3FA] px-4 py-2">
-              <span className="text-krona text-4xl">+3</span>
+            <div className="hidden absolute shadow-experience-card text-black top-8 -left-11 rounded-xl custom-sm:flex items-center justify-center gap-1 bg-gradient-to-br from-[#E1F1F5] to-[#22D3FA] px-4 py-2">
+              <span className="text-krona text-4xl ">+3</span>
               <div className="flex flex-col w-[68px] leading-normal text-xs font-medium">
                 <p>Years of Experiencs</p>
               </div>
@@ -171,7 +171,7 @@ export default function About() {
               <p className="text-sm lg:text-base text-center slg:text-left">
                 Hi, I&apos; am Pietro Rhyan, a
               </p>
-              <h2 className="text-center leading-normal slg:text-left text-poppins font-bold text-3xl lg:text-[40px] bg-gradient-to-br text-transparent from-[#101010] via-[#545454] to-[#888888] bg-clip-text">
+              <h2 className="text-center leading-normal slg:text-left text-poppins font-bold text-3xl lg:text-[40px] bg-gradient-to-br text-transparent from-[#333] via-[#545454] to-[#E4E4E5] bg-clip-text">
                 Software Engineer
               </h2>
 
@@ -192,8 +192,11 @@ export default function About() {
                   >
                     Fros Venture
                   </Link>
-                  . My principal stack nowadays is <b>Javascript</b>,{' '}
-                  <b>Typescript</b>, <b>ReactJS</b> and <b>NodeJS</b>.
+                  . My principal stack nowadays is{' '}
+                  <b className="dark:text-white">Javascript</b>,{' '}
+                  <b className="dark:text-white">Typescript</b>,{' '}
+                  <b className="dark:text-white">ReactJS</b> and{' '}
+                  <b className="dark:text-white">NodeJS</b>.
                 </p>
                 <p className="text-sm lg:text-base">
                   I&apos; am available to remote work or freelance, contact me
@@ -262,8 +265,8 @@ export default function About() {
           />
 
           {/* Appears only after 1135px */}
-          <div className="hidden custom-lgp:block">
-            <div className="flex absolute top-7 left-0 -translate-x-[102px] flex-col items-center text-lightgray text-xs w-[225px] gap-2">
+          <div className="hidden custom-lgp:block text-lightgray text-xs">
+            <div className="flex absolute top-7 left-0 -translate-x-[102px] flex-col items-center w-[225px] gap-2">
               <h5>2017</h5>
               <p className="font-medium">
                 In my first year in high school, which was a full-time IT
@@ -272,7 +275,7 @@ export default function About() {
               </p>
             </div>
 
-            <div className="flex absolute top-7 left-0 translate-x-[148px] flex-col items-center text-lightgray text-xs w-[225px] gap-2">
+            <div className="flex absolute top-7 left-0 translate-x-[148px] flex-col items-center w-[225px] gap-2">
               <h5>2018</h5>
               <p className="font-medium">
                 At this year, a programming championship took place at IFBA
@@ -281,7 +284,7 @@ export default function About() {
               </p>
             </div>
 
-            <div className="flex absolute top-7 right-0 -translate-x-[148px] flex-col items-center text-lightgray text-xs w-[225px] gap-2">
+            <div className="flex absolute top-7 right-0 -translate-x-[148px] flex-col items-center w-[225px] gap-2">
               <h5>2021</h5>
               <p className="font-medium">
                 My first big project in web, Recycle.it, which was a TCC (a
@@ -290,7 +293,7 @@ export default function About() {
               </p>
             </div>
 
-            <div className="flex absolute top-7 right-0 translate-x-[102px] flex-col items-center text-lightgray text-xs w-[225px] gap-2">
+            <div className="flex absolute top-7 right-0 translate-x-[102px] flex-col items-center w-[225px] gap-2">
               <h5>2022</h5>
               <p className="font-medium">
                 Started a collaborative side-hustle with my university friends,
@@ -404,7 +407,7 @@ export default function About() {
           ))}
         </div>
 
-        <hr className="w-[250px] bg-lightgray" />
+        <hr className="w-[250px] border-lightgray dark:border-dark-gray" />
       </section>
 
       <section className="flex flex-col items-center justify-center lg:flex-row lg:justify-center lg:items-start gap-8 px-4 sm:px-8 mb-16">
@@ -425,19 +428,23 @@ export default function About() {
 
         <div className="grid grid-cols-1 sm:grid-cols-[100px_1fr] pt-2 gap-1 sm:gap-5">
           {/* JOBS */}
-          <h5 className="text-sm text-text-lightgray sm:text-end font-medium">
+          <h5 className="text-sm text-text-lightgray dark:text-text-gray sm:text-end font-medium">
             jobs:
           </h5>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 custom-lgp:grid-cols-2 gap-2 sm:gap-4 mb-5 sm:mb-0">
             <div className="w-[230px]">
-              <h4 className="text-sm font-semibold">Computer Technician</h4>
+              <h4 className="text-sm dark:text-white font-semibold">
+                Computer Technician
+              </h4>
               <p className="text-xs font-medium">Secretaria de Educação</p>
               <span className="text-xs font-medium text-text-gray mt-[6px]">
                 Mar 2022 - Sep 2023 · 1yr 7mo
               </span>
             </div>
             <div className="w-[230px]">
-              <h4 className="text-sm font-semibold">Front-en Developer</h4>
+              <h4 className="text-sm dark:text-white font-semibold">
+                Front-end Developer
+              </h4>
               <p className="text-xs font-medium">Fros Venture</p>
               <span className="text-xs font-medium text-text-gray mt-[6px]">
                 Oct 2022 - at moment · 1yr 8mo
@@ -446,12 +453,12 @@ export default function About() {
           </div>
 
           {/* QUALIFICATIONS */}
-          <h5 className="text-sm text-text-lightgray sm:text-end font-medium">
+          <h5 className="text-sm text-text-lightgray dark:text-text-gray sm:text-end font-medium">
             qualifications:
           </h5>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 custom-lgp:grid-cols-2 gap-2 sm:gap-4 mb-5 sm:mb-0">
             <div className="w-[230px]">
-              <h4 className="text-sm font-semibold">
+              <h4 className="text-sm font-semibold dark:text-white">
                 IFBA - Instituto Federal da Bahia
               </h4>
               <p className="text-xs font-medium">
@@ -462,7 +469,7 @@ export default function About() {
               </span>
             </div>
             <div className="w-[230px]">
-              <h4 className="text-sm font-semibold">UniAges</h4>
+              <h4 className="text-sm font-semibold dark:text-white">UniAges</h4>
               <p className="text-xs font-medium">
                 Bachelor&apos; Degree in Computer Science
               </p>
@@ -473,12 +480,12 @@ export default function About() {
           </div>
 
           {/* CERTIFICATES */}
-          <h5 className="text-sm text-text-lightgray sm:text-end font-medium">
+          <h5 className="text-sm text-text-lightgray dark:text-text-gray sm:text-end font-medium">
             certificates:
           </h5>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 custom-lgp:grid-cols-2 gap-2 sm:gap-4 mb-5 sm:mb-0">
             <div className="w-[230px]">
-              <h4 className="text-sm font-semibold">
+              <h4 className="text-sm font-semibold dark:text-white">
                 Ignite React Trail by Rocketseat
               </h4>
               <span className="text-xs font-medium text-text-gray mt-[6px]">
@@ -486,7 +493,7 @@ export default function About() {
               </span>
             </div>
             <div className="w-[230px]">
-              <h4 className="text-sm font-semibold">
+              <h4 className="text-sm font-semibold dark:text-white">
                 Ignite Node Trail by Rocketseat
               </h4>
               <span className="text-xs font-medium text-text-gray mt-[6px]">
@@ -494,7 +501,7 @@ export default function About() {
               </span>
             </div>
             <div className="w-[230px]">
-              <h4 className="text-sm font-semibold">
+              <h4 className="text-sm font-semibold dark:text-white">
                 PCA: Essential Python Programming Concepts by Cisco
               </h4>
               <span className="text-xs font-medium text-text-gray mt-[6px]">
@@ -504,12 +511,12 @@ export default function About() {
           </div>
 
           {/* AWARDS */}
-          <h5 className="text-sm text-text-lightgray sm:text-end font-medium">
+          <h5 className="text-sm text-text-lightgray dark:text-text-gray sm:text-end font-medium">
             awards:
           </h5>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 custom-lgp:grid-cols-2 gap-2 sm:gap-4 mb-5 sm:mb-0">
             <div className="w-[230px]">
-              <h4 className="text-sm font-semibold">
+              <h4 className="text-sm font-semibold dark:text-white">
                 IFBA - Insitituto Federal da Bahia
               </h4>
               <p className="text-xs font-medium">
@@ -522,16 +529,16 @@ export default function About() {
           </div>
 
           {/*  */}
-          <h5 className="text-sm text-text-lightgray sm:text-end font-medium">
+          <h5 className="text-sm text-text-lightgray dark:text-text-gray sm:text-end font-medium">
             languages:
           </h5>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 custom-lgp:grid-cols-2 gap-2 sm:gap-4 mb-5 sm:mb-0">
             <div className="w-[230px]">
-              <h4 className="text-sm font-semibold">PT-BR</h4>
+              <h4 className="text-sm font-semibold dark:text-white">PT-BR</h4>
               <p className="text-xs font-medium">Native</p>
             </div>
             <div className="w-[230px]">
-              <h4 className="text-sm font-semibold">EN-US</h4>
+              <h4 className="text-sm font-semibold dark:text-white">EN-US</h4>
               <p className="text-xs font-medium">Advanced</p>
             </div>
           </div>

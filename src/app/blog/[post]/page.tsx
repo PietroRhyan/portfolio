@@ -28,7 +28,9 @@ export default function Post({ params }: { params: { post: string } }) {
       </div>
       <main className="max-w-5xl pt-10 mb-20 mx-auto px-4 sm:px-8">
         <div className="flex flex-col gap-1 mb-8">
-          <h3 className="text-lg sm:text-3xl font-bold">Title</h3>
+          <h3 className="text-lg sm:text-3xl font-bold dark:text-white">
+            Title
+          </h3>
           <p className="text-sm sm:text-base font-medium">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio
             eveniet dignissimos, sapiente vel sed aliquam. Ea dolorem, sint, nam
@@ -37,7 +39,9 @@ export default function Post({ params }: { params: { post: string } }) {
           </p>
         </div>
         <div className="flex flex-col gap-1 mb-8">
-          <h3 className="text-lg sm:text-3xl font-bold">Title</h3>
+          <h3 className="text-lg sm:text-3xl font-bold dark:text-white">
+            Title
+          </h3>
           <p className="text-sm sm:text-base font-medium">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio
             eveniet dignissimos, sapiente vel sed aliquam. Ea dolorem, sint, nam

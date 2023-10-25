@@ -8,11 +8,6 @@
   box-sizing: border-box;
 }
 
-body {
-  background: #FFF;
-  color: #111111;
-}
-
 /* Create the tooltip */
 [data-title]:hover:after {
   opacity: 1;

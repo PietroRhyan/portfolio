@@ -2,10 +2,27 @@
 
 import { useEffect, useRef, useState } from 'react'
 import { FiChevronDown, FiCheck } from 'react-icons/fi'
+import { VariantProps, tv } from 'tailwind-variants'
 
 const languages = ['English', 'Português']
 
-export function LanguageDropdown() {
+const button = tv({
+  base: 'flex items-center justify-center gap-1 cursor-pointer text-text-gray dark:text-text-lightgray hover:text-black dark:hover:text-white font-medium transition-colors duration-200',
+  variants: {
+    buttonStyle: {
+      bigButton:
+        'py-[10px] pl-4 pr-3 rounded-lg hover:bg-lightgray dark:hover:bg-dark-gray data-[isopen=true]:bg-lightgray dark:data-[isopen=true]:bg-dark-gray',
+      minimalButton: 'py-1 pr-1',
+    },
+  },
+  defaultVariants: {
+    buttonStyle: 'bigButton',
+  },
+})
+
+type LanguageDropdownProps = VariantProps<typeof button>
+
+export function LanguageDropdown({ buttonStyle }: LanguageDropdownProps) {
   const [isSelected, setIsSelected] = useState(languages[0])
   const [openDropdown, setOpenDropdown] = useState(false)
 
@@ -42,7 +59,7 @@ export function LanguageDropdown() {
         id="language-dropdown"
         onClick={() => setOpenDropdown(!openDropdown)}
         data-isopen={openDropdown}
-        className="flex items-center justify-center data-[isopen=true]:bg-lightgray gap-1 cursor-pointer text-text-gray hover:text-black font-medium transition-colors duration-200 py-[10px] pl-4 pr-3 rounded-lg hover:bg-lightgray"
+        className={button({ buttonStyle })}
       >
         <h4>{isSelected}</h4>
         <FiChevronDown size={16} />
@@ -51,14 +68,14 @@ export function LanguageDropdown() {
       {openDropdown && (
         <div
           ref={popupRef}
-          className="absolute z-10 top-12 right-0 border border-lightgray bg-white rounded-lg w-[140px]"
+          className="absolute z-10 top-12 right-0 border border-lightgray dark:border-dark-gray bg-white dark:bg-black-variant rounded-lg w-[140px]"
         >
-          <ul className="divide-y divide-lightgray">
+          <ul className="divide-y divide-lightgray dark:divide-dark-gray">
             {languages.map((lang) => (
               <button
                 key={lang}
                 data-selected={isSelected === lang}
-                className="text-gray w-full p-2 font-medium cursor-pointer hover:text-black transition-colors duration-200 data-[selected=true]:text-blue flex items-center justify-between"
+                className="text-gray w-full p-2 font-medium cursor-pointer hover:text-black dark:hover:text-white transition-colors duration-200 data-[selected=true]:text-blue flex items-center justify-between"
                 onClick={() => {
                   setIsSelected(lang)
                 }}

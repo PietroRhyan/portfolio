@@ -20,14 +20,16 @@ export default function Home() {
           <h1 className="text-poppins text-center text-4xl md:text-6xl bg-gradient-to-r text-transparent bg-clip-text from-[#E90A4D] to-[#EB551590] ">
             Pietro Rhyan
           </h1>
-          <p className="text-sm font-bold mt-1 text-black">Software Engineer</p>
-          <p className="text-sm font-medium text-text-gray mt-3 max-w-[500px] text-center px-4">
+          <p className="text-sm font-bold mt-1 dark:text-white">
+            Software Engineer
+          </p>
+          <p className="text-sm font-medium text-text-gray dark:text-text-lightgray mt-3 max-w-[500px] text-center px-4">
             Pationate about technology and to learn how to do hard things using
             programming
           </p>
           <Link
             href="/about"
-            className="mt-6 flex items-center group text-xs sm:text-sm text-black font-bold underline underline-offset-2"
+            className="mt-6 flex items-center group text-xs sm:text-sm dark:text-white font-bold underline underline-offset-2"
           >
             see more about me
             <span className="pl-1 group-hover:pl-2 transition-all duration-200 ">

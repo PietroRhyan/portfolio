@@ -50,7 +50,7 @@ export function Project({
           priority
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
-        <div className="absolute z-10 back bg-lightgray w-full h-full backdrop-blur-lg opacity-60"></div>
+        <div className="absolute z-10 back bg-lightgray dark:bg-text-gray w-full h-full backdrop-blur-lg opacity-60"></div>
         <Image
           src={logo}
           alt={name}
@@ -66,14 +66,14 @@ export function Project({
             {projectStyle === 'big' ? (
               <Link
                 href="#"
-                className="font-semibold text-sm custom-sm:text-base hover:underline hover:underline-offset-2 focus:underline focus:underline-offset-2 "
+                className="font-semibold text-sm dark:text-white custom-sm:text-base hover:underline hover:underline-offset-2 focus:underline focus:underline-offset-2 "
               >
                 {name}
               </Link>
             ) : (
               <Link
                 href="#"
-                className="font-semibold text-sm hover:underline hover:underline-offset-2 focus:underline focus:underline-offset-2 "
+                className="font-semibold text-sm dark:text-white hover:underline hover:underline-offset-2 focus:underline focus:underline-offset-2 "
               >
                 {name}
               </Link>

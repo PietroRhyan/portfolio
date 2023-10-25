@@ -6,13 +6,14 @@ const button = tv({
   base: 'flex items-center justify-center gap-1 hover:opacity-95 transition-all duration-200 outline-none focus:outline focus:outline-offset-2 focus:outline-blue font-medium',
   variants: {
     buttonStyle: {
-      blackLarge: 'bg-black text-sm text-lightgray py-2 px-3 rounded-md',
+      blackLarge:
+        'bg-black dark:bg-white text-sm text-lightgray dark:text-black py-2 px-3 rounded-md',
       blackSmall:
-        'bg-black text-xs text-lightgray py-[6px] px-2 rounded custom-sm:text-sm',
+        'bg-black dark:bg-white text-xs text-lightgray  dark:text-black py-[6px] px-2 rounded custom-sm:text-sm',
       whiteLarge:
-        'bg-white text-xs text-black border border-black hover:brightness-95 py-2 px-3 rounded-md',
+        'bg-white dark:bg-black-variant text-xs text-black dark:text-white border border-black dark:border-white hover:brightness-95 py-2 px-3 rounded-md',
       whiteSmall:
-        'bg-white text-xs text-black border border-black hover:brightness-95 py-[6px] px-2 rounded custom-sm:text-sm',
+        'bg-white dark:bg-black-variant text-xs text-black dark:text-white border border-black dark:border-white hover:brightness-95 py-[6px] px-2 rounded custom-sm:text-sm',
     },
     defaultVariants: {
       buttonStyle: 'blackLarge',

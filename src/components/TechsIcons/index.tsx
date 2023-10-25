@@ -17,7 +17,6 @@ export function TechsIcons({ name, imageURL, minimalist }: TechIconsProps) {
           height={18}
           draggable={false}
           aria-description={name}
-          style={{ color: '#EFEFEF' }}
         />
       </div>
     )

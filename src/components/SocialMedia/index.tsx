@@ -16,11 +16,11 @@ export function SocialMedia({
   url,
 }: SocialMediaProps) {
   return (
-    <div className="rounded-full w-[30px] h-[30px] bg-gradient-to-b from-[#65626230] via-lightgray to-transparent p-[1px]">
+    <div className="rounded-full w-[30px] h-[30px] bg-gradient-to-b from-[#65626230] dark:from-white via-lightgray dark:via-superlight-blue to-transparent p-[1px]">
       <Link
         href={url}
         target="_blank"
-        className="w-full h-full bg-white rounded-full flex items-center justify-center"
+        className="w-full h-full bg-white dark:bg-black-variant rounded-full flex items-center justify-center"
       >
         {isGithub ? (
           <FiGithub size={16} />
