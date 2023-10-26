@@ -3,9 +3,11 @@
 import { motion } from 'framer-motion'
 import { MobileMenu } from '../../../../context/HandleOpenMobileMenu'
 import { FiX, FiInfo, FiBox, FiEdit2, FiMonitor } from 'react-icons/fi'
+import { HiSwitchHorizontal } from 'react-icons/hi'
 import Link from 'next/link'
 import { MenuType } from '../CentralMenu'
 import { LanguageDropdown } from '../LanguageDropdown'
+import { SwitchTheme } from '../../../../context/SwitchTheme'
 
 export const menus: MenuType[] = [
   {
@@ -32,6 +34,7 @@ export const menus: MenuType[] = [
 
 export function MobileSideMenu() {
   const { isOpen, switchVisibility } = MobileMenu()
+  const { isInDarkTheme, toggleThemeHandler } = SwitchTheme()
 
   return (
     <>
@@ -76,9 +79,13 @@ export function MobileSideMenu() {
           </h4>
           <ul className="flex flex-col items-start gap-2">
             <LanguageDropdown buttonStyle="minimalButton" />
-            <p className="font-semibold text-text-gray dark:text-text-lightgray rounded-lg hover:text-black dark:hover:text-white transition-colors duration-200 cursor-pointer flex items-center gap-1">
-              Theme dark
-            </p>
+            <button
+              onClick={toggleThemeHandler}
+              className="font-semibold text-text-gray dark:text-text-lightgray rounded-lg hover:text-black dark:hover:text-white transition-colors duration-200 cursor-pointer flex items-center gap-1"
+            >
+              {isInDarkTheme ? `Theme dark` : `Theme light`}
+              <HiSwitchHorizontal size={14} />
+            </button>
           </ul>
         </div>
       </motion.div>

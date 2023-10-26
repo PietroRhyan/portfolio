@@ -32,7 +32,6 @@ export function SwitchTheme() {
 }
 
 export function SwitchThemeProvider({ children }: Props) {
-  const htmlElement = document.querySelector('html')
   const [isInDarkTheme, setIsInDarkTheme] = useState(false)
 
   function isLocalStorageEmpty(): boolean {
@@ -47,7 +46,7 @@ export function SwitchThemeProvider({ children }: Props) {
       // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
       const darkTheme: boolean = JSON.parse(localStorage.getItem('darkTheme')!)
 
-      darkTheme && htmlElement?.classList.add('dark')
+      darkTheme && document?.querySelector('html')?.classList.add('dark')
       setIsInDarkTheme(darkTheme)
     }
   }
@@ -67,7 +66,7 @@ export function SwitchThemeProvider({ children }: Props) {
   }
 
   function toggleDarkClassToHtmlTag(): void {
-    htmlElement?.classList.toggle('dark')
+    document?.querySelector('html')?.classList.toggle('dark')
   }
 
   function setValueToLocalStorage(): void {

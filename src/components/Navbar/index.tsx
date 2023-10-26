@@ -35,7 +35,7 @@ export function Navbar() {
 
       {/* Only appears before 768px */}
       <button
-        className="md:hidden block py-2 px-2 rounded-md hover:bg-lightgray transition-colors duration-200"
+        className="md:hidden block py-2 px-2 rounded-md hover:bg-lightgray dark:hover:text-white dark:hover:bg-dark-gray transition-colors duration-200"
         onClick={() => switchVisibility(true)}
       >
         <HiBars3BottomRight size={26} />
