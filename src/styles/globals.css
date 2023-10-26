@@ -30,6 +30,7 @@
   z-index: 5;
   visibility: hidden;
   border-radius: 4px;
+  border: #EFEFEF solid 1px;
   cursor: help;
   background: #111111;
   color: #EFEFEF;
