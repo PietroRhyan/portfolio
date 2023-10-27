@@ -5,7 +5,7 @@ import { FiArrowRight } from 'react-icons/fi'
 
 export default function Home() {
   return (
-    <div className="mt-20">
+    <div className="">
       <div className="flex items-center mx-auto mb-12 justify-center object-center relative">
         <Image
           src={'./bg-gradient.svg'}

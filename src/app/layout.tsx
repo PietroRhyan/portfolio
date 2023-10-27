@@ -7,7 +7,7 @@ import { HandleMobileMenuProvider } from '../../context/HandleOpenMobileMenu'
 import { SwitchThemeProvider } from '../../context/SwitchTheme'
 import { Footer } from '@/components/Footer'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 const poppins = Poppins({
   subsets: ['latin'],
   weight: '700',
@@ -40,7 +40,7 @@ export default function RootLayout({
   return (
     <html lang="en" id="html">
       <body
-        className={`${inter.className} ${poppins.variable} ${kronaOne.variable} text-black bg-white dark:text-text-lightgray dark:bg-black-variant `}
+        className={`${inter.className} ${poppins.variable} ${kronaOne.variable} text-black bg-white dark:text-text-lightgray dark:bg-black-variant`}
       >
         <SwitchThemeProvider>
           <HandleMobileMenuProvider>

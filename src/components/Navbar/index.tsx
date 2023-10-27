@@ -20,7 +20,7 @@ export function Navbar() {
   const { isInDarkTheme } = SwitchTheme()
 
   return (
-    <header className="w-full py-3 px-3 sm:px-8 flex items-center justify-between absolute z-30 top-0">
+    <header className="w-full py-3 px-3 sm:px-8 flex items-center justify-between">
       <Link
         href="/"
         className="rounded-md flex items-center justify-center cursor-pointer"
