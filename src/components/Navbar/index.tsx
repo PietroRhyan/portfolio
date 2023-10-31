@@ -23,13 +23,12 @@ export function Navbar() {
     <header className="w-full py-3 px-3 sm:px-8 flex items-center justify-between">
       <Link
         href="/"
-        className="rounded-md flex items-center justify-center cursor-pointer"
+        className="rounded-md flex items-center justify-center cursor-pointer w-[50px] h-[64px]"
       >
         <Image
           src={isInDarkTheme ? blackLogo : whiteLogo}
-          width={50}
-          height={64}
           alt="Portfolio logo"
+          className="w-auto h-auto"
         />
       </Link>
 
