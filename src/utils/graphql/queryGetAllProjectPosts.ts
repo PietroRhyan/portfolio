@@ -1,10 +1,16 @@
 import { graphcms } from '@/services/api/'
 import { gql } from 'graphql-request'
 
-type ProjectPostType = {
+type IconType = {
+  id: string
+  url: string
+}
+
+export type ProjectPostType = {
   id: string
   slug: string
   title: string
+  icon: IconType
   description: string
   createdAt: string
 }
@@ -21,6 +27,10 @@ const query = gql`
       id
       slug
       title
+      icon {
+        id
+        url
+      }
     }
   }
 `

@@ -1,9 +1,25 @@
+'use client'
+
 import { ProjectPost } from '@/components/ProjectPost'
-import frosVentureLogo from '../../../public/projects-images/fros-logo.svg'
-import recycleItLogo from '../../../public/projects-images/recycleit-logo.svg'
 import { Post } from '@/components/Post'
+import { useEffect, useState } from 'react'
+import {
+  getAllProjectPosts,
+  ProjectPostType,
+} from '@/utils/graphql/queryGetAllProjectPosts'
 
 export default function Blog() {
+  const [projectPosts, setProjectPosts] = useState<ProjectPostType[]>([])
+
+  useEffect(() => {
+    async function getPosts() {
+      const data = await getAllProjectPosts()
+      setProjectPosts(data)
+    }
+
+    getPosts()
+  }, [])
+
   return (
     <main className="max-w-5xl mt-10 mb-20 mx-auto px-4 sm:px-8">
       <div className="mb-9">
@@ -12,7 +28,7 @@ export default function Blog() {
         </h2>
         <h4 className="text-xs sm:text-sm font-semibold">
           Here I post how I created my projects, my difficulties, why I choose
-          that tech or process and more, such as what I’ am studying.
+          that tech or process and more, such as what I&apos; am studying.
         </h4>
       </div>
 
@@ -22,20 +38,16 @@ export default function Blog() {
         </h4>
 
         <div className="grid grid-cols-1 custom-sm:grid-cols-2 md:grid-cols-3 lgp:grid-cols-4 gap-5">
-          <ProjectPost
-            title="Fros Venture"
-            description="Process and difficulties of creating a collaborative side-hustle."
-            logo={frosVentureLogo}
-            postURL="#"
-            readTime="5 min read"
-          />
-          <ProjectPost
-            title="Recycle.it"
-            description="Challenges of building this project."
-            logo={recycleItLogo}
-            postURL="#"
-            readTime="7 min read"
-          />
+          {projectPosts.map((post) => (
+            <ProjectPost
+              key={post.id}
+              title={post.title}
+              description={post.description}
+              logo={post.icon.url}
+              postURL={`/blog/post/${post.slug}`}
+              readTime="5 min read"
+            />
+          ))}
         </div>
       </section>
 

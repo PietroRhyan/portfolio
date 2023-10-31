@@ -8,7 +8,7 @@ export default function Home() {
     <div className="">
       <div className="flex items-center mx-auto mb-12 justify-center object-center relative">
         <Image
-          src={'./bg-gradient.svg'}
+          src={'/bg-gradient.svg'}
           alt=""
           width={500}
           height={262}

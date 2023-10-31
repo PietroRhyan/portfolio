@@ -10,6 +10,10 @@ const query = gql`
       id
       slug
       title
+      icon {
+        id
+        url
+      }
     }
   }
 `
