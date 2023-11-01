@@ -1,8 +1,19 @@
 import { graphcms } from '@/services/api/'
 import { gql } from 'graphql-request'
 
-export type ContentType = {
-  html: string
+type ContentType = {
+  raw: {
+    children: [
+      {
+        type: string
+        children: [
+          {
+            text: string
+          },
+        ]
+      },
+    ]
+  }
 }
 
 export type ImageType = {
@@ -30,7 +41,7 @@ export async function getPostContent(slug: string) {
         description
         createdAt
         content {
-          html
+          raw
         }
         image {
           id

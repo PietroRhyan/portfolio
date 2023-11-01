@@ -30,31 +30,31 @@ interface SkilssType {
 const mainStack: TechsType[] = [
   {
     name: 'JavaScript',
-    imageURL: './tech-logos/javascript.svg',
+    imageURL: '/tech-logos/javascript.svg',
   },
   {
     name: 'TypeScript',
-    imageURL: './tech-logos/typescript.svg',
+    imageURL: '/tech-logos/typescript.svg',
   },
   {
     name: 'ReactJS',
-    imageURL: './tech-logos/react.svg',
+    imageURL: '/tech-logos/react.svg',
   },
   {
     name: 'TailwindCSS',
-    imageURL: './tech-logos/tailwind.svg',
+    imageURL: '/tech-logos/tailwind.svg',
   },
   {
     name: 'NextJS',
-    imageURL: './tech-logos/next.svg',
+    imageURL: '/tech-logos/next.svg',
   },
   {
     name: 'NodeJS',
-    imageURL: './tech-logos/node.svg',
+    imageURL: '/tech-logos/node.svg',
   },
   {
     name: 'PostgresSQL',
-    imageURL: './tech-logos/postgres.svg',
+    imageURL: '/tech-logos/postgres.svg',
   },
   {
     name: 'Prisma.io',
@@ -62,42 +62,42 @@ const mainStack: TechsType[] = [
   },
   {
     name: 'Docker',
-    imageURL: './tech-logos/docker.svg',
+    imageURL: '/tech-logos/docker.svg',
   },
 ]
 
 const otherTechs: TechsType[] = [
   {
     name: 'C++',
-    imageURL: './tech-logos/cplus.svg',
+    imageURL: '/tech-logos/cplus.svg',
   },
   {
     name: 'C#',
-    imageURL: './tech-logos/csharp.svg',
+    imageURL: '/tech-logos/csharp.svg',
   },
   {
     name: 'Python',
-    imageURL: './tech-logos/python.svg',
+    imageURL: '/tech-logos/python.svg',
   },
   {
     name: 'Java',
-    imageURL: './tech-logos/java.svg',
+    imageURL: '/tech-logos/java.svg',
   },
   {
     name: 'Angular',
-    imageURL: './tech-logos/angular.svg',
+    imageURL: '/tech-logos/angular.svg',
   },
   {
     name: 'AWS',
-    imageURL: './tech-logos/aws.svg',
+    imageURL: '/tech-logos/aws.svg',
   },
   {
     name: 'MySQL',
-    imageURL: './tech-logos/mysql.svg',
+    imageURL: '/tech-logos/mysql.svg',
   },
   {
     name: 'Firebase',
-    imageURL: './tech-logos/firebase.svg',
+    imageURL: '/tech-logos/firebase.svg',
   },
 ]
 
@@ -150,7 +150,7 @@ export default function About() {
             <div className="hidden absolute bottom-1/4 shadow-award-card -right-1/4 custom-sm:flex flex-col items-center justify-center gap-2 px-5 py-[10px] bg-gradient-to-br from-[#93F8FF] to-[#66FF58] rounded-xl">
               <div>
                 <Image
-                  src={'./image/trophy.svg'}
+                  src={'/image/trophy.svg'}
                   alt="Trophy"
                   draggable={false}
                   width={47}

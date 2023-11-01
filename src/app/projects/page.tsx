@@ -14,50 +14,50 @@ interface TechsType {
 const frosVentureStack: TechsType[] = [
   {
     name: 'TypeScript',
-    imageURL: './gray-tech-logos/typescript.svg',
+    imageURL: '/gray-tech-logos/typescript.svg',
   },
   {
     name: 'ReactJS',
-    imageURL: './gray-tech-logos/react.svg',
+    imageURL: '/gray-tech-logos/react.svg',
   },
   {
     name: 'TailwindCSS',
-    imageURL: './gray-tech-logos/tailwind.svg',
+    imageURL: '/gray-tech-logos/tailwind.svg',
   },
   {
     name: 'NextJS',
-    imageURL: './gray-tech-logos/next.svg',
+    imageURL: '/gray-tech-logos/next.svg',
   },
   {
     name: 'NodeJS',
-    imageURL: './gray-tech-logos/node.svg',
+    imageURL: '/gray-tech-logos/node.svg',
   },
 ]
 
 const recycleItStack: TechsType[] = [
   {
     name: 'TypeScript',
-    imageURL: './gray-tech-logos/typescript.svg',
+    imageURL: '/gray-tech-logos/typescript.svg',
   },
   {
     name: 'ReactJS',
-    imageURL: './gray-tech-logos/react.svg',
+    imageURL: '/gray-tech-logos/react.svg',
   },
   {
     name: 'Sass',
-    imageURL: './gray-tech-logos/sass.svg',
+    imageURL: '/gray-tech-logos/sass.svg',
   },
   {
     name: 'NextJS',
-    imageURL: './gray-tech-logos/next.svg',
+    imageURL: '/gray-tech-logos/next.svg',
   },
   {
     name: 'Prisma.io',
-    imageURL: './gray-tech-logos/prisma.svg',
+    imageURL: '/gray-tech-logos/prisma.svg',
   },
   {
     name: 'NodeJS',
-    imageURL: './gray-tech-logos/node.svg',
+    imageURL: '/gray-tech-logos/node.svg',
   },
 ]
 
