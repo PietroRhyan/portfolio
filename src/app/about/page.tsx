@@ -1,3 +1,5 @@
+'use client'
+
 import Image from 'next/image'
 import myPicture from '../../../public/image/my-image.png'
 import { ActionButton } from '@/components/ActionButton'
@@ -210,11 +212,13 @@ export default function About() {
                 name="Contact Me"
                 icon={<HiOutlineMail size={16} />}
                 buttonStyle="blackLarge"
+                url="https://mailto:pietroqjg@gmail.com"
               />
               <ActionButton
                 name="Downlaod CV"
                 icon={<FiDownload size={16} />}
                 buttonStyle="blackLarge"
+                onClick={() => console.log('Ola')}
               />
             </div>
           </div>

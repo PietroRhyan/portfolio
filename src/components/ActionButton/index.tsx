@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { ComponentProps, ReactNode } from 'react'
+import { ReactNode, ButtonHTMLAttributes } from 'react'
 import { tv, VariantProps } from 'tailwind-variants'
 
 const button = tv({
@@ -22,7 +22,7 @@ const button = tv({
 })
 
 interface ActionButtonProps
-  extends ComponentProps<'button'>,
+  extends ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof button> {
   name: string
   url?: string
@@ -34,6 +34,7 @@ export function ActionButton({
   icon,
   url,
   buttonStyle,
+  ...rest
 }: ActionButtonProps) {
   if (url) {
     return (
@@ -45,7 +46,7 @@ export function ActionButton({
   }
 
   return (
-    <button className={button({ buttonStyle })}>
+    <button {...rest} className={button({ buttonStyle })}>
       {name}
       {icon || null}
     </button>
