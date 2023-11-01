@@ -1,11 +1,11 @@
 import { graphcms } from '@/services/api/'
 import { gql } from 'graphql-request'
 
-type ContentType = {
+export type ContentType = {
   html: string
 }
 
-type ImageType = {
+export type ImageType = {
   id: string
   url: string
 }
@@ -21,25 +21,25 @@ type PostContentType = {
   }
 }
 
-const query = gql`
-  {
-    post(where: { slug: "fros-venture" }) {
-      id
-      title
-      description
-      createdAt
-      content {
-        html
-      }
-      image {
+export async function getPostContent(slug: string) {
+  const query = gql`
+    {
+      post(where: { slug: "${slug}" }) {
         id
-        url
+        title
+        description
+        createdAt
+        content {
+          html
+        }
+        image {
+          id
+          url
+        }
       }
     }
-  }
-`
+  `
 
-export async function getPostContent() {
   const { post }: PostContentType = await graphcms.request(query)
   return post
 }

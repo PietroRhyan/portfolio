@@ -1,20 +1,19 @@
-type postSlug = string
+import { getAllSlugs } from '@/utils/graphql/queryGetAllSlugs'
+import { getPostContent } from '@/utils/graphql/queryGetPostContent'
 
-export async function generateStaticParams() {
-  const projectPost: postSlug[] = ['FrosVenture', 'RecycleIt']
-
-  return projectPost.map((slug) => ({
-    post: slug,
-  }))
+interface PostProps {
+  params: {
+    post: string
+  }
 }
 
-export default function Post({ params }: { params: { post: string } }) {
-  // const { post } = params
+export default async function Post({ params }: PostProps) {
+  const post = await getProjectPostProps(params.post)
 
   return (
     <>
       <div className="w-full h-[400px] lg:h-[500px] max-w-[1440px] relative">
-        <div className="w-full h-full -top-[85px] absolute -z-10 bg-gradient-to-b from-black to-[#232323]">
+        <div className="w-full h-full -top-[88px] absolute -z-10 bg-gradient-to-b from-black to-[#232323]">
           <div className="text-center absolute z-50 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white">
             <h1 className="text-poppins font-bold text-5xl">Fros Venture</h1>
             <p className="text-bold text-sm custom-sm:text-base lg:text-lg">
@@ -52,4 +51,20 @@ export default function Post({ params }: { params: { post: string } }) {
       </main>
     </>
   )
+}
+
+export const dynamicParams = false
+
+export const generateStaticParams = async () => {
+  const slugs = await getAllSlugs()
+  const paths = slugs.map((slug) => ({
+    post: slug.slug,
+  }))
+
+  return paths
+}
+
+export const getProjectPostProps = async (params: string) => {
+  const content = await getPostContent(params)
+  return content
 }
