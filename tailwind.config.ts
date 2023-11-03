@@ -5,6 +5,9 @@ const config: Config = {
   darkMode: 'class',
   theme: {
     extend: {
+      animation: {
+        'fast-spin': 'spin 500ms linear infinite',
+      },
       backgroundImage: {
         'gradient-bg': "url('../../public/bg-gradient.svg')",
       },

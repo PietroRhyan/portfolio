@@ -5,7 +5,7 @@ import type { Metadata } from 'next'
 import { Inter, Poppins, Krona_One } from 'next/font/google'
 import { HandleMobileMenuProvider } from '../../context/HandleOpenMobileMenu'
 import { Footer } from '@/components/Footer'
-import Provider from './provider'
+import Providers from './providers'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 const poppins = Poppins({
@@ -42,13 +42,13 @@ export default function RootLayout({
       <body
         className={`${inter.className} ${poppins.variable} ${kronaOne.variable} text-black bg-white dark:text-text-lightgray dark:bg-black-variant`}
       >
-        <Provider>
+        <Providers>
           <HandleMobileMenuProvider>
             <Navbar />
             {children}
             <Footer />
           </HandleMobileMenuProvider>
-        </Provider>
+        </Providers>
       </body>
     </html>
   )

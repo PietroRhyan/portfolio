@@ -2,23 +2,20 @@
 
 import { ProjectPost } from '@/components/ProjectPost'
 import { Post } from '@/components/Post'
-import { useEffect, useState } from 'react'
-import {
-  getAllProjectPosts,
-  ProjectPostType,
-} from '@/utils/graphql/queryGetAllProjectPosts'
+import { getAllProjectPosts } from '@/utils/graphql/queryGetAllProjectPosts'
+import { useQuery } from '@tanstack/react-query'
+import { LuLoader2 } from 'react-icons/lu'
 
 export default function Blog() {
-  const [projectPosts, setProjectPosts] = useState<ProjectPostType[]>([])
+  async function getPosts() {
+    const posts = await getAllProjectPosts()
+    return posts
+  }
 
-  useEffect(() => {
-    async function getPosts() {
-      const data = await getAllProjectPosts()
-      setProjectPosts(data)
-    }
-
-    getPosts()
-  }, [])
+  const { data, isLoading } = useQuery({
+    queryKey: ['posts'],
+    queryFn: getPosts,
+  })
 
   return (
     <main className="max-w-5xl mt-10 mb-20 mx-auto px-4 sm:px-8">
@@ -37,18 +34,26 @@ export default function Blog() {
           Projects explanations:
         </h4>
 
-        <div className="grid grid-cols-1 custom-sm:grid-cols-2 md:grid-cols-3 lgp:grid-cols-4 gap-5">
-          {projectPosts.map((post) => (
-            <ProjectPost
-              key={post.id}
-              title={post.title}
-              description={post.description}
-              logo={post.icon.url}
-              postURL={`/blog/post/${post.slug}`}
-              readTime="5 min read"
-            />
-          ))}
-        </div>
+        {isLoading ? (
+          <div className="w-full h-[200px] flex items-center justify-center">
+            <div className="animate-fast-spin">
+              <LuLoader2 size={24} />
+            </div>
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 custom-sm:grid-cols-2 md:grid-cols-3 lgp:grid-cols-4 gap-5">
+            {data?.map((post) => (
+              <ProjectPost
+                key={post.id}
+                title={post.title}
+                description={post.description}
+                logo={post.icon.url}
+                postURL={`/blog/post/${post.slug}`}
+                readTime="5 min read"
+              />
+            ))}
+          </div>
+        )}
       </section>
 
       <section>
