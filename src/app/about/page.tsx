@@ -5,7 +5,7 @@ import myPicture from '../../../public/image/my-image.png'
 import { ActionButton } from '@/components/ActionButton'
 
 import { HiOutlineMail } from 'react-icons/hi'
-import { FiDownload, FiUser, FiMonitor, FiArrowRight } from 'react-icons/fi'
+import { FiUser, FiMonitor, FiArrowRight } from 'react-icons/fi'
 import Link from 'next/link'
 import { TechsIcons } from '@/components/TechsIcons'
 
