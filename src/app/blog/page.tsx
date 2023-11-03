@@ -63,26 +63,11 @@ export default function Blog() {
 
         <div className="flex flex-col gap-6">
           <Post
-            title="I don't know, a post about cats?"
+            title="Example of other post"
             description="My cats are beautiful"
             createdAt="Oct 19, 2023"
-            readTime="2 min read"
+            readTime="1 sec read"
             postURL="#"
-          />
-          <Post
-            title="I don't know, a post about cats?"
-            description="My cats are beautiful"
-            createdAt="Oct 19, 2023"
-            readTime="2 min read"
-            postURL="#"
-          />
-          <Post
-            title="I don't know, a post about cats?"
-            description="My cats are beautiful"
-            createdAt="Oct 19, 2023"
-            readTime="2 min read"
-            postURL="#"
-            className="last:border-none"
             isLastPost
           />
         </div>
