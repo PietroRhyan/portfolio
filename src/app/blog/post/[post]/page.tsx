@@ -65,7 +65,7 @@ export const generateStaticParams = async () => {
   return paths
 }
 
-export const getProjectPostProps = async (params: string) => {
+const getProjectPostProps = async (params: string) => {
   const content = await getPostContent(params)
   return content
 }

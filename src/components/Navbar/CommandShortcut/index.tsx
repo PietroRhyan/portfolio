@@ -74,6 +74,7 @@ export function CommandShortcut() {
 
   // Toggle the menu when ⌘K is pressed
   useEffect(() => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const down = (e: any) => {
       if (e.key === 'k' && (e.metaKey || e.ctrlKey)) {
         e.preventDefault()
