@@ -7,7 +7,7 @@ import { HiSwitchHorizontal } from 'react-icons/hi'
 import Link from 'next/link'
 import { MenuType } from '../CentralMenu'
 import { LanguageDropdown } from '../LanguageDropdown'
-import { SwitchTheme } from '../../../../context/SwitchTheme'
+import { useTheme } from 'next-themes'
 
 export const menus: MenuType[] = [
   {
@@ -34,7 +34,7 @@ export const menus: MenuType[] = [
 
 export function MobileSideMenu() {
   const { isOpen, switchVisibility } = MobileMenu()
-  const { isInDarkTheme, toggleThemeHandler } = SwitchTheme()
+  const { theme, setTheme } = useTheme()
 
   return (
     <>
@@ -80,10 +80,10 @@ export function MobileSideMenu() {
           <ul className="flex flex-col items-start gap-2">
             <LanguageDropdown buttonStyle="minimalButton" />
             <button
-              onClick={toggleThemeHandler}
+              onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
               className="font-semibold text-text-gray dark:text-text-lightgray rounded-lg hover:text-black dark:hover:text-white transition-colors duration-200 cursor-pointer flex items-center gap-1"
             >
-              {isInDarkTheme ? `Theme dark` : `Theme light`}
+              {`Theme ${theme}`}
               <HiSwitchHorizontal size={14} />
             </button>
           </ul>

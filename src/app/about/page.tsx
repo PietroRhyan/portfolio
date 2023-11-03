@@ -5,7 +5,7 @@ import myPicture from '../../../public/image/my-image.png'
 import { ActionButton } from '@/components/ActionButton'
 
 import { HiOutlineMail } from 'react-icons/hi'
-import { FiDownload, FiUser, FiMonitor } from 'react-icons/fi'
+import { FiDownload, FiUser, FiMonitor, FiArrowRight } from 'react-icons/fi'
 import Link from 'next/link'
 import { TechsIcons } from '@/components/TechsIcons'
 
@@ -214,12 +214,15 @@ export default function About() {
                 buttonStyle="blackLarge"
                 url="https://mailto:pietroqjg@gmail.com"
               />
-              <ActionButton
-                name="Downlaod CV"
-                icon={<FiDownload size={16} />}
-                buttonStyle="blackLarge"
-                onClick={() => console.log('Ola')}
-              />
+              <Link
+                href="/projects"
+                className="flex items-center group text-xs sm:text-sm dark:text-white font-bold underline underline-offset-2"
+              >
+                see more about me
+                <span className="pl-1 group-hover:pl-2 transition-all duration-200 ">
+                  <FiArrowRight size={14} />
+                </span>
+              </Link>
             </div>
           </div>
         </section>

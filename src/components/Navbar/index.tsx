@@ -12,12 +12,9 @@ import { ThemeSwitcher } from './ThemeSwitcher'
 import { CommandShortcut } from './CommandShortcut'
 
 import whiteLogo from '../../../public/portfolio-logo-black.svg'
-import blackLogo from '../../../public/portfolio-logo.svg'
-import { SwitchTheme } from '../../../context/SwitchTheme'
 
 export function Navbar() {
   const { isOpen, switchVisibility } = MobileMenu()
-  const { isInDarkTheme } = SwitchTheme()
 
   return (
     <header className="w-full py-3 px-3 sm:px-8 flex items-center justify-between">
@@ -25,11 +22,7 @@ export function Navbar() {
         href="/"
         className="rounded-md flex items-center justify-center cursor-pointer w-[50px] h-[64px]"
       >
-        <Image
-          src={isInDarkTheme ? blackLogo : whiteLogo}
-          alt="Portfolio logo"
-          className="w-auto h-auto"
-        />
+        <Image src={whiteLogo} alt="Portfolio logo" className="w-auto h-auto" />
       </Link>
 
       {/* Only appears before 768px */}
