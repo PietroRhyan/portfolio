@@ -5,6 +5,8 @@ type ContentType = {
   raw: {
     children: [
       {
+        src: string
+        title: string
         type: string
         children: [
           {
@@ -28,7 +30,6 @@ type PostContentType = {
     description: string
     createdAt: string
     content: ContentType[]
-    image: ImageType
   }
 }
 
@@ -42,10 +43,6 @@ export async function getPostContent(slug: string) {
         createdAt
         content {
           raw
-        }
-        image {
-          id
-          url
         }
       }
     }
