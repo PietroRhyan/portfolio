@@ -140,6 +140,7 @@ export default function About() {
               draggable={false}
               className="rounded-xl"
               priority
+              placeholder="blur"
             />
 
             <div className="hidden absolute shadow-experience-card text-black top-8 -left-11 rounded-xl custom-sm:flex items-center justify-center gap-1 bg-gradient-to-br from-[#E1F1F5] to-[#22D3FA] px-4 py-2">

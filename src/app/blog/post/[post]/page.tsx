@@ -17,7 +17,7 @@ export default async function Post({ params }: PostProps) {
 
   return (
     <>
-      <div className="w-full h-[400px] lg:h-[500px] max-w-[1440px] relative">
+      <div className="w-full h-[400px] lg:h-[500px] relative">
         <div className="w-full h-full -top-[88px] absolute -z-10 bg-gradient-to-b from-black to-[#232323]">
           <div className="text-center absolute z-50 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white">
             <h1 className="text-poppins font-bold text-5xl">{post.title}</h1>
@@ -35,21 +35,28 @@ export default async function Post({ params }: PostProps) {
           content.raw.children.map((subcontent) =>
             subcontent.type === 'heading-two' ? (
               <h2
-                className="text-2xl sm:text-4xl font-bold dark:text-white mb-4"
+                className="text-2xl sm:text-4xl font-bold dark:text-white mb-4 mt-8"
                 key={subcontent.children[0].text}
               >
                 {subcontent.children[0].text}
               </h2>
             ) : subcontent.type === 'paragraph' ? (
               <p
-                className="text-sm sm:text-base font-medium mb-8"
+                className="text-sm sm:text-base font-medium mb-4"
                 key={subcontent.children[0].text.length}
               >
                 {subcontent.children[0].text}
               </p>
             ) : subcontent.type === 'image' ? (
-              <div className="max-w-[756px] max-h-[360px] flex items-center justify-center p-2 relative rounded-xl bg-lightgray dark:bg-dark-gray">
-                <Image src={subcontent.src} alt={subcontent.title} />
+              <div className="max-w-[756px] p-2 h-[200px] md:h-[360px] mx-auto flex items-center justify-center rounded-xl bg-lightgray dark:bg-dark-gray">
+                <div className="w-full h-full relative rounded-[4px] overflow-hidden object-cente">
+                  <Image
+                    src={subcontent.src}
+                    alt={subcontent.title}
+                    fill
+                    sizes="(max-width: 768px) 70vw, (max-width: 1000px) 100vw"
+                  />
+                </div>
               </div>
             ) : null,
           ),
