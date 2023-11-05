@@ -1,6 +1,7 @@
 import { getAllSlugs } from '@/utils/graphql/queryGetAllSlugs'
 import { getPostContent } from '@/utils/graphql/queryGetPostContent'
 import { format } from 'date-fns'
+import Image from 'next/image'
 
 type PostProps = {
   params: {
@@ -39,14 +40,18 @@ export default async function Post({ params }: PostProps) {
               >
                 {subcontent.children[0].text}
               </h2>
-            ) : (
+            ) : subcontent.type === 'paragraph' ? (
               <p
                 className="text-sm sm:text-base font-medium mb-8"
                 key={subcontent.children[0].text.length}
               >
                 {subcontent.children[0].text}
               </p>
-            ),
+            ) : subcontent.type === 'image' ? (
+              <div className="max-w-[756px] max-h-[360px] flex items-center justify-center p-2 relative rounded-xl bg-lightgray dark:bg-dark-gray">
+                <Image src={subcontent.src} alt={subcontent.title} />
+              </div>
+            ) : null,
           ),
         )}
       </main>
