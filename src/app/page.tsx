@@ -6,7 +6,7 @@ import { FiArrowRight } from 'react-icons/fi'
 export default function Home() {
   return (
     <div className="">
-      <div className="flex items-center mx-auto mb-12 justify-center object-center relative">
+      <div className="flex items-center mx-auto justify-center object-center relative">
         <Image
           src={'/bg-gradient.svg'}
           alt=""
@@ -16,7 +16,7 @@ export default function Home() {
           draggable={false}
         />
 
-        <div className="absolute top-20 flex flex-col items-center justify-center">
+        <div className="absolute flex flex-col items-center justify-center">
           <h1 className="text-poppins text-center text-4xl md:text-6xl bg-gradient-to-r text-transparent bg-clip-text from-[#E90A4D] to-[#EB551590] ">
             Pietro Rhyan
           </h1>
