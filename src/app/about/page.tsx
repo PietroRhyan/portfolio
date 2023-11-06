@@ -172,7 +172,7 @@ export default function About() {
                 About me
               </p>
               <p className="text-sm lg:text-base text-center slg:text-left">
-                Hi, I&apos; am Pietro Rhyan, a
+                Hi, I&apos;am Pietro Rhyan, a
               </p>
               <h2 className="text-center leading-normal slg:text-left text-poppins font-bold text-3xl lg:text-[40px] bg-gradient-to-b text-transparent from-[#101010] dark:from-[#545454] via-[#545454] dark:to-white to-[#E4E4E5] bg-clip-text">
                 Software Engineer
@@ -186,8 +186,8 @@ export default function About() {
                   ideas into code.
                 </p>
                 <p className="text-sm lg:text-base">
-                  Actually I&apos; am working on a collaborative side-hustle
-                  with my university friends, the{' '}
+                  Actually I&apos;am working on a collaborative side-hustle with
+                  my university friends, the{' '}
                   <Link
                     href="https://fros.dev/"
                     target="_blank"
@@ -202,8 +202,7 @@ export default function About() {
                   <b className="dark:text-white">NodeJS</b>.
                 </p>
                 <p className="text-sm lg:text-base">
-                  I&apos; am available to remote work or freelance, contact me
-                  😀
+                  I&apos;am available to remote work or freelance, contact me 😀
                 </p>
               </div>
             </div>

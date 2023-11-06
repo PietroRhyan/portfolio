@@ -7,6 +7,13 @@ const config: Config = {
     extend: {
       animation: {
         'fast-spin': 'spin 500ms linear infinite',
+        fade: 'fade 500ms ease',
+      },
+      keyframes: {
+        fade: {
+          '0%': { transform: 'scale(0.5)', opacity: '0' },
+          '100%': { transform: 'scale(1)', opacity: '1' },
+        },
       },
       backgroundImage: {
         'gradient-bg': "url('../../public/bg-gradient.svg')",
