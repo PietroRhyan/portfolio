@@ -65,6 +65,10 @@ export function LanguageDropdown({ buttonStyle }: LanguageDropdownProps) {
         <FiChevronDown size={16} />
       </button>
 
+      <div className="absolute px-1 -top-2 -right-2 rounded-[6px] bg-red-500 text-white font-semibold text-xs">
+        <p>soon</p>
+      </div>
+
       {openDropdown && (
         <div
           ref={popupRef}
