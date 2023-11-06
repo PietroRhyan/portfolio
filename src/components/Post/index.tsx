@@ -6,7 +6,6 @@ interface PostProps extends ComponentProps<'article'> {
   description: string
   postURL: string
   createdAt: string
-  readTime: string
   isLastPost?: boolean
 }
 
@@ -15,7 +14,6 @@ export function Post({
   description,
   postURL,
   createdAt,
-  readTime,
   isLastPost,
 }: PostProps) {
   return (
@@ -31,7 +29,6 @@ export function Post({
           {title}
         </Link>
         <p className="text-xs sm:text-sm font-medium mb-2">{description}</p>
-        <span className="text-xs italic text-text-gray">{readTime}</span>
       </div>
       <span className="text-xs min-w-[90px] custom-sm:text-sm font-medium">
         {createdAt}

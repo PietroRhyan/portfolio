@@ -16,6 +16,15 @@ export default async function Post({ params }: PostProps) {
 
   const formatedDate = format(date, 'MMM dd, yyyy')
 
+  const wordsPerIndex = post.content.map((content) =>
+    content.raw.children.map((subcontent) =>
+      subcontent.children[0].text.split(' '),
+    ),
+  )
+
+  const totalWords = wordsPerIndex.flat().flat().length
+  const readTime = totalWords / 200 // 200 is the average read speed
+
   return (
     <>
       <div className="w-full h-[400px] lg:h-[500px] relative">
@@ -26,9 +35,14 @@ export default async function Post({ params }: PostProps) {
               {post.description}
             </p>
           </div>
-          <p className="text-sm absolute bottom-6 left-1/2 -translate-x-1/2 sm:text-base font-semibold text-white text-center">
-            {formatedDate}
-          </p>
+          <div className="absolute bottom-6 left-1/2 -translate-x-1/2  flex items-center justify-center gap-1">
+            <span className="text-sm sm:text-base font-semibold text-white">
+              {formatedDate} |
+            </span>
+            <span className="italic text-xs sm:text-sm text-lightgray">
+              {Math.floor(readTime)}min read
+            </span>
+          </div>
         </div>
       </div>
       <main className="max-w-5xl mb-20 mx-auto px-4 sm:px-8">

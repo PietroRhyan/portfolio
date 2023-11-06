@@ -49,7 +49,6 @@ export default function Blog() {
                 description={post.description}
                 logo={post.icon.url}
                 postURL={`/blog/post/${post.slug}`}
-                readTime="5 min read"
               />
             ))}
           </div>
@@ -66,7 +65,6 @@ export default function Blog() {
             title="Example of other post"
             description="My cats are beautiful"
             createdAt="Oct 19, 2023"
-            readTime="1 sec read"
             postURL="#"
             isLastPost
           />

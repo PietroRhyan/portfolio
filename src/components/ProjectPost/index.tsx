@@ -4,7 +4,6 @@ import Link from 'next/link'
 interface ProjectPostProps {
   title: string
   description: string
-  readTime?: string
   logo: string
   postURL: string
 }
@@ -12,7 +11,6 @@ interface ProjectPostProps {
 export function ProjectPost({
   title,
   description,
-  readTime,
   logo,
   postURL,
 }: ProjectPostProps) {
@@ -28,11 +26,6 @@ export function ProjectPost({
           </h4>
           <p className="text-xs font-medium min-h-[50px]">{description}</p>
         </Link>
-        {readTime ? (
-          <span className="text-xs text-text-gray italic text-right">
-            {readTime}
-          </span>
-        ) : null}
       </div>
     </div>
   )
