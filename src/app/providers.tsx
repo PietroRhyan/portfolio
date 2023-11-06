@@ -13,7 +13,7 @@ type ProviderProps = {
 
 export default function Providers({ children }: ProviderProps) {
   return (
-    <ThemeProvider attribute="class">
+    <ThemeProvider attribute="class" enableSystem={false} defaultTheme="light">
       <QueryClientProvider client={client}>{children}</QueryClientProvider>
     </ThemeProvider>
   )
