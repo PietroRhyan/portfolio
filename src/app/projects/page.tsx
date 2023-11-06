@@ -6,6 +6,9 @@ import frosVenturePageImage from '../../../public/projects-images/fros-page.png'
 import recycleItLogo from '../../../public/projects-images/recycleit-logo.svg'
 import recycleItPageImage from '../../../public/projects-images/recycleit-page.png'
 
+import portfolioLogo from '../../../public/portfolio-icon-logo-black.svg'
+import portfolioPageImage from '../../../public/projects-images/portfolio-page.png'
+
 interface TechsType {
   name: string
   imageURL: string
@@ -61,6 +64,29 @@ const recycleItStack: TechsType[] = [
   },
 ]
 
+const portfolioTechs: TechsType[] = [
+  {
+    name: 'TypeScript',
+    imageURL: '/gray-tech-logos/typescript.svg',
+  },
+  {
+    name: 'ReactJS',
+    imageURL: '/gray-tech-logos/react.svg',
+  },
+  {
+    name: 'TailwindCSS',
+    imageURL: '/gray-tech-logos/tailwind.svg',
+  },
+  {
+    name: 'NextJS',
+    imageURL: '/gray-tech-logos/next.svg',
+  },
+  {
+    name: 'GraphQL',
+    imageURL: '/gray-tech-logos/graphql.svg',
+  },
+]
+
 export default function Projects() {
   return (
     <main className="max-w-5xl mt-10 mb-20 mx-auto px-4 sm:px-8">
@@ -95,6 +121,17 @@ export default function Projects() {
             projectStyle="big"
             techs={recycleItStack}
             githubURL="https://github.com/gjoao11/recycleit"
+          />
+          <Project
+            name="Portfolio"
+            description="My portfolio where I show my projects, describe them, show my setup and more."
+            image={portfolioPageImage}
+            logo={portfolioLogo}
+            postLink="/blog/post/portfolio"
+            projectStyle="small"
+            techs={portfolioTechs}
+            siteURL="https://portfolio-pi-rose-29.vercel.app/"
+            githubURL="https://github.com/PietroRhyan/portfolio"
           />
         </div>
       </section>
