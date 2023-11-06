@@ -85,6 +85,7 @@ export default async function Post({ params }: PostProps) {
 export const dynamicParams = false
 
 export const generateStaticParams = async () => {
+  const res = await fetch('', { next: { revalidate: 60 * 2 /* 2 minutes */ } })
   const slugs = await getAllSlugs()
   const paths = slugs.map((slug) => ({
     post: slug.slug,
