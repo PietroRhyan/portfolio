@@ -23,8 +23,8 @@ export function ProjectPost({
           <Image
             src={logo}
             alt={title}
-            width={40}
-            height={40}
+            width={38}
+            height={38}
             priority
             className="w-auto h-auto"
           />

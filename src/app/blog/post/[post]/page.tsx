@@ -41,7 +41,8 @@ export default async function Post({ params }: PostProps) {
               >
                 {subcontent.children[0].text}
               </h2>
-            ) : subcontent.type === 'paragraph' ? (
+            ) : subcontent.type === 'paragraph' &&
+              subcontent.children[0].text ? (
               <p
                 className="text-sm sm:text-base font-medium mb-4"
                 key={subcontent.children[0].text.length}
@@ -49,7 +50,7 @@ export default async function Post({ params }: PostProps) {
                 {subcontent.children[0].text}
               </p>
             ) : subcontent.type === 'image' ? (
-              <div className="max-w-[756px] p-2 h-[200px] md:h-[360px] mx-auto flex items-center justify-center rounded-xl bg-lightgray dark:bg-dark-gray">
+              <div className="max-w-[756px] p-2 h-[200px] mb-4 md:h-[360px] mx-auto flex items-center justify-center rounded-xl bg-lightgray dark:bg-dark-gray">
                 <div className="w-full h-full relative rounded-[4px] overflow-hidden object-cente">
                   <Image
                     src={subcontent.src}
