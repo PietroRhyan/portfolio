@@ -25,7 +25,7 @@ export default function Blog() {
         </h2>
         <h4 className="text-xs sm:text-sm font-semibold">
           Here I post how I created my projects, my difficulties, why I choose
-          that tech or process and more, such as what I&apos; am studying.
+          that tech or process and more, such as what I&apos;am studying.
         </h4>
       </div>
 

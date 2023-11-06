@@ -130,7 +130,7 @@ const skills: SkilssType[] = [
 
 export default function About() {
   return (
-    <main className="mt-10 mb-20 ">
+    <main className="mt-10 mb-20">
       <section className="max-w-5xl mx-auto px-4 sm:px-8">
         <section className="flex flex-col items-center slg:flex-row slg:justify-center slg:items-start slg:gap-24 gap-8 mb-24">
           <div className="relative w-[300px] shadow-photo dark:shadow-dark-photo rounded-xl custom-sm:ml-11">
@@ -219,7 +219,7 @@ export default function About() {
                 href="/projects"
                 className="flex items-center group text-xs sm:text-sm dark:text-white font-bold underline underline-offset-2"
               >
-                see more about me
+                see my projects
                 <span className="pl-1 group-hover:pl-2 transition-all duration-200 ">
                   <FiArrowRight size={14} />
                 </span>
@@ -446,7 +446,7 @@ export default function About() {
               </h4>
               <p className="text-xs font-medium">Secretaria de Educação</p>
               <span className="text-xs font-medium text-text-gray mt-[6px]">
-                Mar 2022 - Sep 2023 · 1yr 7mo
+                Mar 2022 - Sep 2023
               </span>
             </div>
             <div className="w-[230px]">
@@ -455,7 +455,7 @@ export default function About() {
               </h4>
               <p className="text-xs font-medium">Fros Venture</p>
               <span className="text-xs font-medium text-text-gray mt-[6px]">
-                Oct 2022 - at moment · 1yr 8mo
+                Oct 2022 - at moment
               </span>
             </div>
           </div>

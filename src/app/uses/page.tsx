@@ -67,7 +67,7 @@ const uses: ToolsProps[] = [
       },
       {
         item: 'Omni Theme',
-        description: "I want to switch this theme, but I' too lazy.",
+        description: "I want to switch this theme, but I'm too lazy.",
       },
       {
         item: 'Symbols',
@@ -129,8 +129,8 @@ export default function Uses() {
           Setup, Tools and Apps.
         </h2>
         <h4 className="text-xs sm:text-sm font-semibold">
-          I don&apos;t know why I make this page, I&apos; am not even a famous
-          person, but I think its a good idea to share if you what I&apos; am
+          I don&apos;t know why I make this page, I&apos;am not even a famous
+          person, but I think its a good idea to share if you what I&apos;am
           using, my setup, tools and etc.
         </h4>
       </div>

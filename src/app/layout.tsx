@@ -25,9 +25,9 @@ export const metadata: Metadata = {
   keywords: ['nextjs', 'react', 'typescript', 'nodejs'],
   authors: [{ name: 'Pietro Rhyan', url: 'https://github.com/PietroRhyan' }],
   icons: {
-    icon: '/portfolio-icon-logo.svg',
-    shortcut: '/portfolio-icon-logo.svg',
-    apple: '/portfolio-icon-logo.svg',
+    icon: '/portfolio-icon-logo-black.svg',
+    shortcut: '/portfolio-icon-logo-black.svg',
+    apple: '/portfolio-icon-logo-black.svg',
   },
   category: 'Portfolio',
 }
@@ -40,7 +40,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.className} ${poppins.variable} ${kronaOne.variable} text-black bg-white dark:text-text-lightgray dark:bg-black-variant`}
+        className={`${inter.className} ${poppins.variable} ${kronaOne.variable} text-black bg-white dark:text-text-lightgray dark:bg-black-variant flex flex-col justify-between min-h-screen`}
       >
         <Providers>
           <HandleMobileMenuProvider>

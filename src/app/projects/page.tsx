@@ -80,6 +80,7 @@ export default function Projects() {
             description="Fros Venture is a website where the open-source developers are awarded and recognized by the community."
             image={frosVenturePageImage}
             logo={frosVentureLogo}
+            postLink="/blog/post/fros-venture"
             projectStyle="big"
             techs={frosVentureStack}
             siteURL="https://fros.dev/"
@@ -90,6 +91,7 @@ export default function Projects() {
             description="Application for geolocation of waste collection points. A Final Paper completed in 2021 to Highschool."
             image={recycleItPageImage}
             logo={recycleItLogo}
+            postLink="/blog/post/recycle-it"
             projectStyle="big"
             techs={recycleItStack}
             githubURL="https://github.com/gjoao11/recycleit"

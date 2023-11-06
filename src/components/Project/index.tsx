@@ -24,6 +24,7 @@ interface ProjectProps extends VariantProps<typeof card> {
   description: string
   image: StaticImageData
   logo: string
+  postLink: string
   siteURL?: string
   githubURL?: string
   techs: TechIconsProps[]
@@ -34,6 +35,7 @@ export function Project({
   description,
   image,
   logo,
+  postLink,
   siteURL,
   githubURL,
   techs,
@@ -48,6 +50,7 @@ export function Project({
           alt={name}
           className="absolute"
           priority
+          placeholder="blur"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
         <div className="absolute z-10 back bg-lightgray dark:bg-text-gray w-full h-full backdrop-blur-lg opacity-60"></div>
@@ -65,14 +68,14 @@ export function Project({
           <div className="flex items-center justify-between mb-2">
             {projectStyle === 'big' ? (
               <Link
-                href="#"
+                href={postLink}
                 className="font-semibold text-sm dark:text-white custom-sm:text-base hover:underline hover:underline-offset-2 focus:underline focus:underline-offset-2 "
               >
                 {name}
               </Link>
             ) : (
               <Link
-                href="#"
+                href={postLink}
                 className="font-semibold text-sm dark:text-white hover:underline hover:underline-offset-2 focus:underline focus:underline-offset-2 "
               >
                 {name}
@@ -102,7 +105,7 @@ export function Project({
         <div className="flex items-center justify-between">
           <Link
             className="underline underline-offset-2 text-text-gray text-xs font-medium custom-sm:text-sm"
-            href="#"
+            href={postLink}
           >
             See more
           </Link>
