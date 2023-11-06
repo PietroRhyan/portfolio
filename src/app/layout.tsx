@@ -6,6 +6,7 @@ import { Inter, Poppins, Krona_One } from 'next/font/google'
 import { HandleMobileMenuProvider } from '../../context/HandleOpenMobileMenu'
 import { Footer } from '@/components/Footer'
 import Providers from './providers'
+import { BackToTopButton } from '@/components/BackToTopButton'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 const poppins = Poppins({
@@ -45,6 +46,7 @@ export default function RootLayout({
         <Providers>
           <HandleMobileMenuProvider>
             <Navbar />
+            <BackToTopButton />
             {children}
             <Footer />
           </HandleMobileMenuProvider>
