@@ -83,6 +83,7 @@ export default async function Post({ params }: PostProps) {
 }
 
 export const dynamicParams = false
+export const revalidate = 60 * 2 // 2 minutes
 
 export const generateStaticParams = async () => {
   const slugs = await getAllSlugs()
