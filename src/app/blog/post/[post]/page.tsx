@@ -1,6 +1,7 @@
 import { getAllSlugs } from '@/utils/graphql/queryGetAllSlugs'
 import { getPostContent } from '@/utils/graphql/queryGetPostContent'
 import { format } from 'date-fns'
+
 import Image from 'next/image'
 
 type PostProps = {

@@ -25,9 +25,9 @@ export const metadata: Metadata = {
   keywords: ['nextjs', 'react', 'typescript', 'nodejs'],
   authors: [{ name: 'Pietro Rhyan', url: 'https://github.com/PietroRhyan' }],
   icons: {
-    icon: '/portfolio-icon-logo.svg',
-    shortcut: '/portfolio-icon-logo.svg',
-    apple: '/portfolio-icon-logo.svg',
+    icon: '/portfolio-icon-logo-black.svg',
+    shortcut: '/portfolio-icon-logo-black.svg',
+    apple: '/portfolio-icon-logo-black.svg',
   },
   category: 'Portfolio',
 }

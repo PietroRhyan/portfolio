@@ -48,6 +48,7 @@ export function Project({
           alt={name}
           className="absolute"
           priority
+          placeholder="blur"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
         <div className="absolute z-10 back bg-lightgray dark:bg-text-gray w-full h-full backdrop-blur-lg opacity-60"></div>
