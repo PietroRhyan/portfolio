@@ -40,7 +40,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.className} ${poppins.variable} ${kronaOne.variable} text-black bg-white dark:text-text-lightgray dark:bg-black-variant`}
+        className={`${inter.className} ${poppins.variable} ${kronaOne.variable} text-black bg-white dark:text-text-lightgray dark:bg-black-variant flex flex-col justify-between min-h-screen`}
       >
         <Providers>
           <HandleMobileMenuProvider>

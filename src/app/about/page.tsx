@@ -130,7 +130,7 @@ const skills: SkilssType[] = [
 
 export default function About() {
   return (
-    <main className="mt-10 mb-20 ">
+    <main className="mt-10 mb-20">
       <section className="max-w-5xl mx-auto px-4 sm:px-8">
         <section className="flex flex-col items-center slg:flex-row slg:justify-center slg:items-start slg:gap-24 gap-8 mb-24">
           <div className="relative w-[300px] shadow-photo dark:shadow-dark-photo rounded-xl custom-sm:ml-11">
