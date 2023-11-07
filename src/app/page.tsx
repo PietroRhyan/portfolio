@@ -41,7 +41,7 @@ export default function Home() {
             <SocialMedia isGithub url="https://github.com/PietroRhyan" />
             <SocialMedia
               isLinkedin
-              url="https://www.linkedin.com/in/pietro-rhyan-8bb79222b/"
+              url="https://www.linkedin.com/in/pietrorhyan/"
             />
             <SocialMedia isX url="https://twitter.com/pietrorhyan2" />
           </div>
