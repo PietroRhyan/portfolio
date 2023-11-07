@@ -128,7 +128,7 @@ export default function Projects() {
             image={portfolioPageImage}
             logo={portfolioLogo}
             postLink="/blog/post/portfolio"
-            projectStyle="small"
+            projectStyle="big"
             techs={portfolioTechs}
             siteURL="https://portfolio-pi-rose-29.vercel.app/"
             githubURL="https://github.com/PietroRhyan/portfolio"

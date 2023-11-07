@@ -9,11 +9,11 @@ const button = tv({
       blackLarge:
         'bg-black dark:bg-white text-sm text-lightgray dark:text-black py-2 px-3 rounded-md',
       blackSmall:
-        'bg-black dark:bg-white text-xs text-lightgray dark:text-black py-[6px] px-2 rounded',
+        'bg-black dark:bg-white text-xs custom-sm:text-sm text-lightgray dark:text-black py-[6px] px-2 rounded',
       whiteLarge:
         'bg-white dark:bg-black-variant text-xs text-black dark:text-white border border-black dark:border-white hover:brightness-95 py-2 px-3 rounded-md',
       whiteSmall:
-        'bg-white dark:bg-black-variant text-xs text-black dark:text-white border border-black dark:border-white hover:brightness-95 py-[6px] px-2 rounded',
+        'bg-white dark:bg-black-variant text-xs custom-sm:text-sm text-black dark:text-white border border-black dark:border-white hover:brightness-95 py-[6px] px-2 rounded',
     },
     defaultVariants: {
       buttonStyle: 'blackLarge',
