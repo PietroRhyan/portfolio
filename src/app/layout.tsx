@@ -7,6 +7,7 @@ import { HandleMobileMenuProvider } from '../../context/HandleOpenMobileMenu'
 import { Footer } from '@/components/Footer'
 import Providers from './providers'
 import { BackToTopButton } from '@/components/BackToTopButton'
+import { Analytics } from '@vercel/analytics/react'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 const poppins = Poppins({
@@ -48,6 +49,7 @@ export default function RootLayout({
             <Navbar />
             <BackToTopButton />
             {children}
+            <Analytics />
             <Footer />
           </HandleMobileMenuProvider>
         </Providers>
