@@ -212,7 +212,7 @@ export default function About() {
                 name="Contact Me"
                 icon={<HiOutlineMail size={16} />}
                 buttonStyle="blackLarge"
-                url="https://mailto:pietroqjg@gmail.com"
+                url="mailto:pietroqjg@gmail.com"
               />
               <Link
                 href="/projects"
