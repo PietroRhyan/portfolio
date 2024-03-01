@@ -9,6 +9,9 @@ import recycleItPageImage from '../../../public/projects-images/recycleit-page.p
 import portfolioLogo from '../../../public/portfolio-icon-logo-black.svg'
 import portfolioPageImage from '../../../public/projects-images/portfolio-page.png'
 
+import cmaLogo from '../../../public/projects-images/cma-logo.svg'
+import cmaPage from '../../../public/projects-images/cma-page.png'
+
 interface TechsType {
   name: string
   imageURL: string
@@ -64,7 +67,30 @@ const recycleItStack: TechsType[] = [
   },
 ]
 
-const portfolioTechs: TechsType[] = [
+const cmaStack: TechsType[] = [
+  {
+    name: 'TypeScript',
+    imageURL: '/gray-tech-logos/typescript.svg',
+  },
+  {
+    name: 'ReactJS',
+    imageURL: '/gray-tech-logos/react.svg',
+  },
+  {
+    name: 'NextJS',
+    imageURL: '/gray-tech-logos/next.svg',
+  },
+  {
+    name: 'TailwindCSS',
+    imageURL: '/gray-tech-logos/tailwind.svg',
+  },
+  {
+    name: 'GraphQL',
+    imageURL: '/gray-tech-logos/graphql.svg',
+  },
+]
+
+const portfolioStack: TechsType[] = [
   {
     name: 'TypeScript',
     imageURL: '/gray-tech-logos/typescript.svg',
@@ -129,9 +155,19 @@ export default function Projects() {
             logo={portfolioLogo}
             postLink="/blog/post/portfolio"
             projectStyle="big"
-            techs={portfolioTechs}
+            techs={portfolioStack}
             siteURL="https://portfolio-pi-rose-29.vercel.app/"
             githubURL="https://github.com/PietroRhyan/portfolio"
+          />
+          <Project
+            name="Portfolio"
+            description="Freelance landing page of CMA Digital Music."
+            image={cmaPage}
+            logo={cmaLogo}
+            postLink="/blog/post/portfolio"
+            projectStyle="big"
+            techs={cmaStack}
+            siteURL="https://cmadigitalmusic.com.br/"
           />
         </div>
       </section>
