@@ -160,7 +160,7 @@ export default function Projects() {
             githubURL="https://github.com/PietroRhyan/portfolio"
           />
           <Project
-            name="Portfolio"
+            name="CMA Landing Page"
             description="Freelance landing page of CMA Digital Music."
             image={cmaPage}
             logo={cmaLogo}
