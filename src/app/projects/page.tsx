@@ -164,7 +164,7 @@ export default function Projects() {
             description="Freelance landing page of CMA Digital Music."
             image={cmaPage}
             logo={cmaLogo}
-            postLink="/blog/post/portfolio"
+            postLink="/blog/post/cma-landing-page"
             projectStyle="big"
             techs={cmaStack}
             siteURL="https://cmadigitalmusic.com.br/"
