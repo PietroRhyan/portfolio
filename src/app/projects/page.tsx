@@ -9,6 +9,9 @@ import recycleItPageImage from '../../../public/projects-images/recycleit-page.p
 import portfolioLogo from '../../../public/portfolio-icon-logo-black.svg'
 import portfolioPageImage from '../../../public/projects-images/portfolio-page.png'
 
+import manorderLogo from '../../../public/projects-images/manorder-logo.svg'
+import manorderPageImage from '../../../public/projects-images/manorder-page.png'
+
 import cmaLogo from '../../../public/projects-images/cma-logo.svg'
 import cmaPage from '../../../public/projects-images/cma-page.png'
 
@@ -64,6 +67,25 @@ const recycleItStack: TechsType[] = [
   {
     name: 'NodeJS',
     imageURL: '/gray-tech-logos/node.svg',
+  },
+]
+
+const manorderStack: TechsType[] = [
+  {
+    name: 'TypeScript',
+    imageURL: '/gray-tech-logos/typescript.svg',
+  },
+  {
+    name: 'ReactJS',
+    imageURL: '/gray-tech-logos/react.svg',
+  },
+  {
+    name: 'NextJS',
+    imageURL: '/gray-tech-logos/next.svg',
+  },
+  {
+    name: 'TailwindCSS',
+    imageURL: '/gray-tech-logos/tailwind.svg',
   },
 ]
 
@@ -147,6 +169,16 @@ export default function Projects() {
             projectStyle="big"
             techs={recycleItStack}
             githubURL="https://github.com/gjoao11/recycleit"
+          />
+          <Project
+            name="Manorder"
+            description="SaaS application of restaurants to manage and monitoring orders and invoices."
+            image={manorderPageImage}
+            logo={manorderLogo}
+            postLink="/blog/post/manorder"
+            projectStyle="big"
+            techs={manorderStack}
+            githubURL="https://github.com/Manorder"
           />
           <Project
             name="Portfolio"

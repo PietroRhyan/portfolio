@@ -9,7 +9,11 @@ import Providers from './providers'
 import { BackToTopButton } from '@/components/BackToTopButton'
 import { Analytics } from '@vercel/analytics/react'
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-inter',
+})
 const poppins = Poppins({
   subsets: ['latin'],
   weight: '700',
